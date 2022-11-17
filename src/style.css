@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  font-family: Neue Montreal, system-ui, sans-serif;
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
