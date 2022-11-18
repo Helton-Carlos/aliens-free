@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Index from './pages/Index.vue'
+import Boarding from './pages/Boarding.vue'
 </script>
 
 <template>
-  <div>
-    <Index />
-  </div>
+<div>
+  <router-view>
+    <Boarding />
+  </router-view>
+</div>
 </template>
