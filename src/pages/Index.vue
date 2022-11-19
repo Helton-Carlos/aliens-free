@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter  } from 'vue-router';
+import { onMounted } from 'vue';
+
+const router = useRouter ()
+
+onMounted(()=> {
+  setTimeout(()=>{
+    router.push({ name: "boarding" })
+  }, 5000)
+})
+</script>
 
 <template>
   <div class="h-screen lg:items-center lg:flex lg:justify-center">
