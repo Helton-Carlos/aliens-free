@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { useRouter  } from 'vue-router';
 import { onMounted } from 'vue';
+import Icon from '../components/Icon/Icon.vue';
 
 const router = useRouter ()
 
 onMounted(()=> {
   setTimeout(()=>{
     router.push({ name: "boarding" })
-  }, 5000)
+  }, 4000)
 })
 </script>
 
@@ -28,9 +29,12 @@ onMounted(()=> {
 
       <p class="text-gray pt-2 text-sm">
         Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et
-        malesuada fames.
+        tempor incididunt ut labore et dolore magna aliqua.
       </p>
+
+      <div class="mt-4 flex justify-center">
+        <Icon name="Spinner" required />
+      </div>
     </div>
   </div>
 </template>
