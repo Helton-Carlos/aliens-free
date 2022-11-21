@@ -3,7 +3,7 @@ import { useRouter  } from 'vue-router';
 import { onMounted } from 'vue';
 import Icon from '../components/Icon/Icon.vue';
 
-const router = useRouter ()
+const router = useRouter()
 
 onMounted(()=> {
   setTimeout(()=>{
