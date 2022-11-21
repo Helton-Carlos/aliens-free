@@ -12,9 +12,9 @@ const routes = [
         component: () => import('../pages/Boarding.vue')
     },
     {
-        path: "/sing",
-        name: "sing",
-        component: () => import('../pages/Sing.vue')
+        path: "/sign",
+        name: "sign",
+        component: () => import('../pages/Sign.vue')
     }
 ]
 

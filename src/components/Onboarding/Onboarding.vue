@@ -14,7 +14,7 @@ function allCount(index: number) {
 }
 
 function bntNext() {
-  count.value < 2? count.value++ : router.push({ name: "sing" });
+  count.value < 2? count.value++ : router.push({ name: "sign" });
 }
 </script>
 
