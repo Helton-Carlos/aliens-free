@@ -12,10 +12,10 @@ export function makeServer({ environment = "development" } = {}) {
       this.namespace = "api";
 
       this.get("/users", () => ({
-        reminders: [
-          { id: 0, nome: "helton", numero: 5 },
-          { id: 1, nome: "tayna", numero: 5 },
-          { id: 2, nome: "talita", numero: 10 },
+        company: [
+          { id: 0, nome: "correios", numero: 10 },
+          { id: 1, nome: "jadlog", numero: 15 },
+          { id: 2, nome: "loggi", numero: 10 },
         ],
       }));
     },

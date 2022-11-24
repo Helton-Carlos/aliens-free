@@ -15,7 +15,7 @@ function bntNext() {
 }
 
 function bntNextPage() {
-  router.push({ name: "Home" });
+  router.push({ name: "home" });
 }
 </script>
 
@@ -24,7 +24,7 @@ function bntNextPage() {
     <Close @onClick="clickClose" class="p-5"/>
 
     <div class="flex justify-center">
-      <Button title="sign in" color="dark" class="m-2 w-full lg:w-[250px]" @onClick='bntNext()'/>
+      <Button title="sign in" color="dark" class="m-2 w-full lg:w-[250px]" @onClick='bntNextPage()'/>
       <Button title="sign up" class="m-2 w-full lg:w-[250px]" @onClick='bntNext()'/>
     </div>
 
@@ -35,7 +35,7 @@ function bntNextPage() {
         <Input label="Email" type="email" placeholder="Enter your email" />
         <Input label="Password" type="password" placeholder="Enter your password" />
         
-        <Button title="Sign in" class="py-2 w-full" @onClick='bntNextPage()'/>
+        <Button title="Sign in" class="py-2 w-full" @onClick='bntNext()'/>
       </form>
     </div>
   </div>
