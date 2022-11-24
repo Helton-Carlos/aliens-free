@@ -8,13 +8,13 @@ const router = useRouter()
 onMounted(()=> {
   setTimeout(()=>{
     router.push({ name: "boarding" })
-  }, 4000)
+  }, 10000)
 })
 </script>
 
 <template>
   <div class="h-screen lg:items-center lg:flex lg:justify-center">
-    <div class="m-4 mt-10 lg:mt-0">
+    <div class="m-4 mt-10 lg:mt-4">
       <img src="../assets/Jato.svg" alt="Jato" />
     </div>
     

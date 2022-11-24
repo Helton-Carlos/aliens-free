@@ -4,7 +4,7 @@ import 'animate.css';
 
 import App from './App.vue'
 import Router from './routes/index'
-import { makeServer } from "./server"
+import { makeServer } from "./server/index"
 
 if (process.env.NODE_ENV === "development") {
   makeServer()

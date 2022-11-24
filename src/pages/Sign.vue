@@ -13,6 +13,10 @@ function clickClose() {
 function bntNext() {
   alert("2")
 }
+
+function bntNextPage() {
+  router.push({ name: "Home" });
+}
 </script>
 
 <template>
@@ -31,7 +35,7 @@ function bntNext() {
         <Input label="Email" type="email" placeholder="Enter your email" />
         <Input label="Password" type="password" placeholder="Enter your password" />
         
-        <Button title="Sign in" class="py-2 w-full" @onClick='bntNext()'/>
+        <Button title="Sign in" class="py-2 w-full" @onClick='bntNextPage()'/>
       </form>
     </div>
   </div>
