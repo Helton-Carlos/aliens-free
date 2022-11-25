@@ -21,7 +21,7 @@ function bntNext() {
 <template>
   <div class="text-center w-5/6">
     <img :src="board[count].image" :alt="board[count].title" class="m-auto h-[55%] mt-4" />
-    <h3 class="text-white pt-4 font-medium">{{ board[count].title }}</h3>
+    <h3 class="text-white pt-4 font-medium animate__backInRight">{{ board[count].title }}</h3>
     <p class="text-gray pt-2 text-sm">
       {{ board[count].subtitle }}
     </p>

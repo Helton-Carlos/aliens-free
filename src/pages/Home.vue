@@ -15,8 +15,8 @@ onMounted(() => {
   api.get("/users").then((response) => {
     const { company } = response.data;
 
-    company.filter((value) => {
-      companes.value.push(value.numero);
+    company.filter((value :companes) => {
+      companes.value.push(value.numero) ;
       
       let total: number;
       total = 0;
