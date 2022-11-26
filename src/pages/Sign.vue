@@ -7,16 +7,21 @@ import { ref } from "vue";
 
 const router = useRouter();
 
-const email = ref<string | number>("");
-const password = ref<string | number>("")
+const email = ref<string>("");
+const password = ref<string>("")
 
 function clickClose() {
   router.push({ name: "index" });
 }
 
 function checkForm() {
-  console.log(email.value);
-  console.log(password.value);
+  if(email.value && password.value) {
+    alert("Ok!")
+  }else {
+    alert("Preencha os campos")
+  }
+  email.value = "";
+  password.value = "";
 }
 
 function bntNextPage() {
@@ -38,7 +43,7 @@ function bntNextPage() {
       <Button
         title="sign up"
         class="m-2 w-full lg:w-[250px]"
-        @onClick="bntNext()"
+        @onClick="bntNextPage()"
       />
     </div>
 
