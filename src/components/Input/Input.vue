@@ -1,18 +1,37 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-defineProps<{ label: string, placeholder: string, type: string }>()
+defineProps<{
+  label: string;
+  id: string;
+  placeholder: string;
+  type: string;
+  modelValue: string | number;
+}>();
 
-const value = ref<string>('')
+const emit = defineEmits<{
+  (e: 'update:modelValue', id: string | number): void
+}>()
+
+function updateInput(event) {
+  emit("update:modelValue", event.target.value);
+}
 </script>
 
 <template>
   <div>
-    <label for="first_name" class="block mb-2 capitalize text-sm font-medium text-gray-900 dark:text-white">{{ label }}</label>
+    <label
+      v-if="label"
+      :for="id"
+      class="block mb-2 capitalize text-sm font-medium text-gray-900 dark:text-white"
+    >
+      {{ label }}
+    </label>
     <input
+      :id="id"
       :type="type"
+      :value="modelValue"
       class="block mb-8 bg-dark w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40"
       :placeholder="placeholder"
-      v-model="value"
+      @input="updateInput"
       required
     />
   </div>
