@@ -13,9 +13,7 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.get("/users", () => ({
         company: [
-          { id: 0, nome: "correios", numero: 10 },
-          { id: 1, nome: "jadlog", numero: 15 },
-          { id: 2, nome: "loggi", numero: 10 },
+          { id: 0, email: "teste@gmail.com", password: "teste@gmail.com" },
         ],
       }));
     },
