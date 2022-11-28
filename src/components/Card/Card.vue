@@ -3,7 +3,7 @@ defineProps<{ title: string, subtitle: string, imagem: string }>()
 </script>
 
 <template>
-  <div class="w-11/12 mx-auto p-4 bg-white rounded-lg shadow-md">
+  <div class="p-4 mb-4 bg-white rounded-lg shadow-md">
     <div class="flex items-center space-x-4">
       <div class="flex-shrink-0">
         <img
