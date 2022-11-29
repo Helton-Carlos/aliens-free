@@ -23,16 +23,17 @@ import Card from "../components/Card/Card.vue";
       </div>
     </div>
 
-    <div class="bg-white w-full h-full py-4">
+    <div class="bg-white w-full min-h-screen py-4">
       <div class="w-11/12 mx-auto">
         <div>
+          <h3 class="text-lg font-semibold">Services</h3>
           <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            imagem="./src/assets/icon/Nave.svg"
             title="P2P Trading"
             subtitle="Bank Transfer, Paypal Revolut..."
           />
           <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            imagem="./src/assets/icon/Card.svg"
             title="P2P Trading"
             subtitle="Bank Transfer, Paypal Revolut..."
           />
@@ -41,28 +42,14 @@ import Card from "../components/Card/Card.vue";
         <div>
           <h3 class="text-lg font-semibold">Recent Coin</h3>
           <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            title="P2P Trading"
-            subtitle="Bank Transfer, Paypal Revolut..."
+            imagem="./src/assets/icon/Crypto_blue.svg"
+            title="2,059.83"
+            subtitle="BTC/BUSD"
           />
           <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            title="P2P Trading"
-            subtitle="Bank Transfer, Paypal Revolut..."
-          />
-        </div>
-
-        <div>
-          <h3 class="text-lg font-semibold">Top Coins</h3>
-          <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            title="P2P Trading"
-            subtitle="Bank Transfer, Paypal Revolut..."
-          />
-          <Card
-            imagem="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            title="P2P Trading"
-            subtitle="Bank Transfer, Paypal Revolut..."
+            imagem="./src/assets/icon/Crypto_yellow.svg"
+            title="40,059.83"
+            subtitle="SOL/BUSD"
           />
         </div>
       </div>

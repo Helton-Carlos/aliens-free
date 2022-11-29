@@ -7,7 +7,7 @@ defineProps<{ title: string, subtitle: string, imagem: string }>()
     <div class="flex items-center space-x-4">
       <div class="flex-shrink-0">
         <img
-          class="w-12 h-12 rounded-full"
+          class="w-12 h-12"
           :src="imagem"
           alt="Neil image"
         />
@@ -17,7 +17,7 @@ defineProps<{ title: string, subtitle: string, imagem: string }>()
         <p class="text-sm text-gray-medio">{{ subtitle }}</p>
       </div>
       <div
-        class="inline-flex items-center text-base font-semibold bg-gray-medio p-2 rounded-lg"
+        class="inline-flex items-center text-base font-semibold bg-gray p-2 rounded-lg"
       >
         <img src="../../assets/icon/Seta.svg" alt="Seta" class="h-3" />
       </div>
