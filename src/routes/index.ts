@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> =[
     {
         path: "/sign",
         name: "sign",
-        component: () => import('../pages/Sign.vue')
+        component: () => import('../pages/Sing/Sign.vue')
     },
     {
         path: "/home",

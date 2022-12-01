@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import Close from "../components/Icon/Close.vue";
-import Button from "../components/Button/Button.vue";
-import Input from "../components/Input/Input.vue";
+import Close from "../../components/Icon/Close.vue";
+import Button from "../../components/Button/Button.vue";
+import Input from "../../components/Input/Input.vue";
 import { useRouter } from "vue-router";
-import { api } from "../server/axios";
+import { api } from "../../server/axios";
 import { ref } from "vue";
-
-interface users {
-  id: number;
-  email: string;
-  password: string;
-}
 
 const router = useRouter();
 
