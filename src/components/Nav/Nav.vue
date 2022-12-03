@@ -46,21 +46,21 @@ function onNotification() {
       <img
         src="../../assets/icon/Lupa.svg"
         alt="Lupa"
-        class="cursor-pointer"
+        class="cursor-pointer pr-2"
         @click="onSearch"
       />
       <img
         v-if="!inputShow"
         src="../../assets/icon/Menu.svg"
         alt="Menu"
-        class="cursor-pointer"
+        class="cursor-pointer px-2"
         @click="onMenu"
       />
       <img
         v-if="!inputShow"
         src="../../assets/icon/Notificacao.svg"
         alt="Notificação"
-        class="cursor-pointer"
+        class="cursor-pointer pl-2"
         @click="onNotification"
       />
     </div>
