@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  label: string;
+  label?: string;
   id: string;
   placeholder: string;
   type: string;
@@ -21,7 +21,7 @@ function updateInput(event: any) {
     <label
       v-if="label"
       :for="id"
-      class="block mb-2 capitalize text-sm font-medium text-gray-900 dark:text-white"
+      class="block mb-4 capitalize text-sm font-medium text-gray-900 dark:text-white"
     >
       {{ label }}
     </label>
@@ -29,7 +29,7 @@ function updateInput(event: any) {
       :id="id"
       :type="type"
       :value="modelValue"
-      class="block mb-8 bg-dark w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40"
+      class="block bg-dark w-full p-2 pl-8 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40"
       :placeholder="placeholder"
       @input="updateInput"
       required

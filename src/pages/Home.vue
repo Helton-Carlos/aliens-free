@@ -5,7 +5,7 @@ import Nav from "../components/Nav/Nav.vue";
 
 <template>
   <div>
-    <div class="w-11/12 flex justify-between mx-auto py-4">
+    <div class="w-11/12 mx-auto py-6">
       <Nav />
     </div>
 
