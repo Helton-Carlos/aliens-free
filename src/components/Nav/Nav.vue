@@ -39,6 +39,7 @@ function onNotification() {
         type="text"
         placeholder="Search ..."
         v-model:modelValue="search"
+        class="md:w-[500px]"
       />
     </div>
 
