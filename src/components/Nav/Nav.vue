@@ -1,23 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Input from "../../components/Input/Input.vue";
-import { useRouter } from "vue-router";
+
+defineEmits<{ (e:'onNotification'): void,  (e:'onMenu'): void}>();
 
 const name = ref<string>("Helton");
 const search = ref<string>("");
 
-const router = useRouter();
 const inputShow = ref<boolean>(false);
 
 function onSearch() {
   inputShow.value = !inputShow.value;
 }
 
-function onMenu() {}
-
-function onNotification() {
-  router.push({ name: "index" });
-}
 </script>
 
 <template>
@@ -55,14 +50,14 @@ function onNotification() {
         src="../../assets/icon/Menu.svg"
         alt="Menu"
         class="cursor-pointer px-2"
-        @click="onMenu"
+        @click="$emit('onMenu')"
       />
       <img
         v-if="!inputShow"
         src="../../assets/icon/Notificacao.svg"
         alt="Notificação"
         class="cursor-pointer pl-2"
-        @click="onNotification"
+        @click="$emit('onNotification')"
       />
     </div>
   </div>
