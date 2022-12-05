@@ -25,6 +25,7 @@ function updateInput(event: any) {
     >
       {{ label }}
     </label>
+    
     <input
       :id="id"
       :type="type"

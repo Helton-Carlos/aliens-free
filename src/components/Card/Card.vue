@@ -13,7 +13,7 @@ defineProps<{ title: string, subtitle: string, imagem: string }>()
         />
       </div>
       <div class="flex-1 min-w-0">
-        <p class="text-sm font-medium text-gray-full truncate">{{ title }}</p>
+        <p class="text-sm font-medium text-gray-full truncate capitalize">{{ title }}</p>
         <p class="text-sm text-gray-medio">{{ subtitle }}</p>
       </div>
       <div

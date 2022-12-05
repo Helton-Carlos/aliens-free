@@ -6,7 +6,7 @@ import App from './App.vue';
 import Router from './routes/index';
 import VueApexCharts from "vue3-apexcharts";
 import { makeServer } from "./server/index";
-import {LoadingPlugin} from 'vue-loading-overlay';
+import { LoadingPlugin } from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/css/index.css';
 
 if (process.env.NODE_ENV === "development") {

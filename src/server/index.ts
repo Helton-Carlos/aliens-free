@@ -16,6 +16,15 @@ export function makeServer({ environment = "development" } = {}) {
           { id: 0, email: "teste@gmail.com", password: "teste@gmail.com" },
         ],
       }));
+
+      this.get("/notification", () => ({
+        note: [
+          { title: "increase in dollar", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+          { title: "Down of the EURO", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+          { title: "Discount on purchase", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+          { title: "Purchase options", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+        ],
+      }));
     },
   });
 
