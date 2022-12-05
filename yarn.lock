@@ -1110,6 +1110,11 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
+"vue-loading-overlay@6.0":
+  "integrity" "sha512-5GCvv6hPjNfHg+tKnLkk6yO/b/AdCCkdZb2dfrVFOuDyJz38dbm34k6oohVy/xIoFzPGsEEVtwCxq5G3RIYZ1Q=="
+  "resolved" "https://registry.npmjs.org/vue-loading-overlay/-/vue-loading-overlay-6.0.2.tgz"
+  "version" "6.0.2"
+
 "vue-router@^4.0.13":
   "integrity" "sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.0.13.tgz"

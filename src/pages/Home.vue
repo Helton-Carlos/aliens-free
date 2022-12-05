@@ -17,7 +17,7 @@ function onMenu() {
 
 <template>
   <div>
-    <div class="w-11/12 mx-auto py-6">
+    <div class="w-11/12 mx-auto py-7">
       <Nav @onNotification="onNotification" @onMenu="onMenu" />
     </div>
 

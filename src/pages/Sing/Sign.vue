@@ -2,6 +2,7 @@
 import Close from "../../components/Icon/Close.vue";
 import Button from "../../components/Button/Button.vue";
 import Input from "../../components/Input/Input.vue";
+import Loading from "vue-loading-overlay";
 import { useRouter } from "vue-router";
 import { api } from "../../server/axios";
 import { ref } from "vue";
@@ -11,26 +12,40 @@ const router = useRouter();
 const email = ref<string>("");
 const password = ref<string>("");
 
+const isLoading = ref<boolean>(false);
+const fullPage = ref<boolean>(true);
+
 function clickClose() {
   router.push({ name: "index" });
 }
 
 function checkForm() {
-  if (email.value && password.value) {
-    api.get("/users").then((response) => {
-     response.data;
-    });
+  isLoading.value = true;
 
-    router.push({ name: "home" });
-  } else {
-    alert("Preencha os campos");
-  }
-  email.value = "";
-  password.value = "";
+  setTimeout(() => {
+    isLoading.value = false;
+
+    if (email.value && password.value) {
+      api.get("/users").then((response) => {
+        response.data;
+      });
+
+      router.push({ name: "home" });
+    } else {
+      alert("Preencha os campos");
+    }
+
+    email.value = "";
+    password.value = "";
+  }, 2000);
 }
 
 function bntNextPage() {
   router.push({ name: "home" });
+}
+
+function onCancel() {
+  console.log("User cancelled the loader.");
 }
 </script>
 
@@ -38,16 +53,16 @@ function bntNextPage() {
   <div>
     <Close @onClick="clickClose" class="p-5 lg:p-8" />
 
-    <div class="flex justify-center lg:py-2">
+    <div class="flex justify-center my-2 lg:py-2">
       <Button
         title="sign in"
         color="dark"
-        class="m-2 w-full lg:w-[250px]"
+        class="w-full lg:w-[250px]"
         @onClick="bntNextPage()"
       />
       <Button
         title="sign up"
-        class="m-2 w-full lg:w-[250px]"
+        class="w-full lg:w-[250px]"
         @onClick="bntNextPage()"
       />
     </div>
@@ -76,8 +91,22 @@ function bntNextPage() {
           class="mb-4"
         />
 
-        <Button title="Sign in" class="py-2 w-full" type="submit" />
+        <Button title="Sign in" class="py-2 my-2 w-full" type="submit" />
       </form>
+
+      <div class="vl-parent">
+        <!-- https://github.com/ankurk91/vue-loading-overlay -->
+        <loading
+          v-model:active="isLoading"
+          color="#5ED5A8"
+          loader="spinner"
+          width="50px"
+          background-color="#000000"
+          :can-cancel="true"
+          :on-cancel="onCancel"
+          :is-full-page="fullPage"
+        />
+      </div>
     </div>
   </div>
 </template>
