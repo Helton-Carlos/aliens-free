@@ -30,9 +30,9 @@ init();
       <Card
         v-for="note in notes"
         key="note"
-        imagem="./src/assets/icon/Nave.svg"
         :title="note.title"
         :subtitle="note.context"
+        :imagem="note.imagem"
       />
       <loading
         v-model:active="isLoading"

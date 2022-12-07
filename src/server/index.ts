@@ -19,10 +19,30 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.get("/notification", () => ({
         note: [
-          { title: "increase in dollar", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-          { title: "Down of the EURO", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-          { title: "Discount on purchase", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-          { title: "Purchase options", context: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+          {
+            title: "increase in dollar",
+            context:
+              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            imagem: "../src/assets/icon/Aliens.svg",
+          },
+          {
+            title: "Down of the EURO",
+            context:
+              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            imagem: "../src/assets/icon/Aliens.svg",
+          },
+          {
+            title: "Discount on purchase",
+            context:
+              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            imagem: "./src/assets/icon/Aliens.svg",
+          },
+          {
+            title: "Purchase options",
+            context:
+              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            imagem: "./src/assets/icon/Aliens.svg",
+          },
         ],
       }));
     },

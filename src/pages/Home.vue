@@ -10,7 +10,7 @@ function onNotification() {
   pageValue.value = true
 }
 
-function onMenu() {
+function onIndex() {
   pageValue.value = false
 }
 </script>
@@ -18,7 +18,7 @@ function onMenu() {
 <template>
   <div>
     <div class="w-11/12 mx-auto py-7">
-      <Nav @onNotification="onNotification" @onMenu="onMenu" />
+      <Nav @onNotification="onNotification" @onIndex="onIndex" />
     </div>
 
     <div class="bg-white w-full min-h-screen py-4">

@@ -9,7 +9,7 @@ defineProps<{ title: string, subtitle: string, imagem: string }>()
         <img
           class="w-12 h-12"
           :src="imagem"
-          alt="Neil image"
+          :alt="title"
         />
       </div>
       <div class="flex-1 min-w-0">
