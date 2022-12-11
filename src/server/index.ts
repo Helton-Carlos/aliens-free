@@ -22,25 +22,25 @@ export function makeServer({ environment = "development" } = {}) {
           {
             title: "increase in dollar",
             context:
-              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "The U.S. dollar is strengthening because the Fed adopted a hawkish monetary policy stance in response to skyrocketing inflation.",
             imagem: "../src/assets/icon/Aliens.svg",
           },
           {
             title: "Down of the EURO",
             context:
-              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "We look at three important factors that affect U.S. dollar value, and how to determine ... If the demand for the dollar increases then so does its value.",
             imagem: "../src/assets/icon/Aliens.svg",
           },
           {
             title: "Discount on purchase",
             context:
-              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Purchase discount is an offer from the supplier to the purchaser, to reduce the payment amount if the payment is made within a certain period of time.",
             imagem: "./src/assets/icon/Aliens.svg",
           },
           {
             title: "Purchase options",
             context:
-              "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "A purchase option assures the option holder of the right to purchase property at a certain price within a certain time period but without an obligation to do so.",
             imagem: "./src/assets/icon/Aliens.svg",
           },
         ],
