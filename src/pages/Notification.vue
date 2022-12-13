@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Loading from "vue-loading-overlay";
+import { INotification } from "../types/utilities";
 import { api } from "../server/axios";
 import { useRouter } from "vue-router";
+import Loading from "vue-loading-overlay";
 import Nav from "../components/Nav/Nav.vue";
-import { INotification } from "../components/Notification/Notification";
 import Card from "../components//Card/Card.vue";
 
 const codeId = defineProps<{ id: number }>();
@@ -29,13 +29,17 @@ function onIndex() {
   router.push({ name: 'home' })
 }
 
+function onNotification() {
+  window.history.back()
+}
+
 getNotification()
 </script>
 
 <template>
   <div>
     <div class="w-11/12 mx-auto py-7">
-      <Nav @onIndex="onIndex" />
+      <Nav @onIndex="onIndex" @onNotification="onNotification" />
     </div>
 
     <div class="bg-white w-full min-h-screen py-4">

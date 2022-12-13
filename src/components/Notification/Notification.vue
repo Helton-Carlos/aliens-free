@@ -4,7 +4,7 @@ import Loading from "vue-loading-overlay";
 import { api } from "../../server/axios";
 import Card from "../Card/Card.vue";
 import { useRouter } from "vue-router";
-import { INotification } from "./Notification";
+import { INotification } from "../../types/utilities";
 
 const notes = ref<INotification[]>([]);
 
