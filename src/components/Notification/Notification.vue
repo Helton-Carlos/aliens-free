@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Loading from "vue-loading-overlay";
-import Card from "../Card/Card.vue";
 import { api } from "../../server/axios";
+import Card from "../Card/Card.vue";
+import { useRouter } from "vue-router";
 import { INotification } from "./Notification";
 
 const notes = ref<INotification[]>([]);
 
 const isLoading = ref<boolean>(false);
 const fullPage = ref<boolean>(true);
+
+const router = useRouter();
 
 function init() {
   isLoading.value = true;
@@ -20,6 +23,10 @@ function init() {
   });
 }
 
+function onNotification(index: number){
+  router.push({ name: 'notification', params: { id: index } })
+}
+
 init();
 </script>
 
@@ -28,11 +35,13 @@ init();
     <div>
       <h3 class="text-lg font-semibold">Notification</h3>
       <Card
-        v-for="note in notes"
+        v-for="(note, index) in notes"
         key="note"
+        @click="onNotification(index)"
         :title="note.title"
         :subtitle="note.context"
         :imagem="note.imagem"
+        :arrow="true"
       />
       <loading
         v-model:active="isLoading"

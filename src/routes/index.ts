@@ -20,6 +20,12 @@ const routes: Array<RouteRecordRaw> =[
         path: "/home",
         name: "home",
         component: () => import('../pages/Home.vue')
+    },
+    {
+        path: "/notification/:id",
+        name: "notification",
+        props: true,
+        component: () => import('../pages/Notification.vue')
     }
 ]
 

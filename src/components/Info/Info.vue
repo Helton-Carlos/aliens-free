@@ -10,11 +10,13 @@ import Card from "../Card/Card.vue";
         imagem="./src/assets/icon/Nave.svg"
         title="P2P Trading"
         subtitle="Bank Transfer, Paypal Revolut..."
+        :arrow="true"
       />
       <Card
         imagem="./src/assets/icon/Card.svg"
         title="P2P Trading"
         subtitle="Bank Transfer, Paypal Revolut..."
+        :arrow="true"
       />
     </div>
 
@@ -24,11 +26,13 @@ import Card from "../Card/Card.vue";
         imagem="./src/assets/icon/Crypto_blue.svg"
         title="2,059.83"
         subtitle="BTC/BUSD"
+        :arrow="true"
       />
       <Card
         imagem="./src/assets/icon/Crypto_yellow.svg"
         title="40,059.83"
         subtitle="SOL/BUSD"
+        :arrow="true"
       />
     </div>
   </div>
