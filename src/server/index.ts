@@ -17,6 +17,52 @@ export function makeServer({ environment = "development" } = {}) {
         ],
       }));
 
+      this.get("/money", () => ({
+        moedas: [
+          {
+            USDBRL: {
+              code: "USD",
+              codein: "BRL",
+              name: "Dólar Americano/Real Brasileiro",
+              high: "5.2941",
+              low: "5.2941",
+              varBid: "0",
+              pctChange: "0",
+              bid: "5.2938",
+              ask: "5.2943",
+              timestamp: "1670968803",
+              create_date: "2022-12-13 19:00:03",
+            },
+            EURBRL: {
+              code: "EUR",
+              codein: "BRL",
+              name: "Euro/Real Brasileiro",
+              high: "5.631",
+              low: "5.6228",
+              varBid: "-0.0008",
+              pctChange: "-0.01",
+              bid: "5.6252",
+              ask: "5.6278",
+              timestamp: "1670978335",
+              create_date: "2022-12-13 21:38:55",
+            },
+            BTCBRL: {
+              code: "BTC",
+              codein: "BRL",
+              name: "Bitcoin/Real Brasileiro",
+              high: "94",
+              low: "89.752",
+              varBid: "2564",
+              pctChange: "2.83",
+              bid: "93.097",
+              ask: "93.178",
+              timestamp: "1670978056",
+              create_date: "2022-12-13 21:34:16",
+            },
+          },
+        ],
+      }));
+
       this.get("/notification", () => ({
         note: [
           {
