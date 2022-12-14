@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import Card from "../Card/Card.vue";
+import { ref } from "vue";
+import { api } from "../../server/axios";
+import { IInfo } from "./Info";
+
+const money = ref<IInfo[]>([]);
+
+function getMoney() {
+  api.get("/money").then((response) => {
+    const { moedas } = response.data;
+    money.value = moedas;
+  });
+}
+
+getMoney();
 </script>
 
 <template>
@@ -19,19 +33,14 @@ import Card from "../Card/Card.vue";
         :arrow="true"
       />
     </div>
-
     <div>
       <h3 class="text-lg font-semibold">Recent Coin</h3>
       <Card
-        imagem="./src/assets/icon/Crypto_blue.svg"
-        title="2,059.83"
-        subtitle="BTC/BUSD"
-        :arrow="true"
-      />
-      <Card
-        imagem="./src/assets/icon/Crypto_yellow.svg"
-        title="40,059.83"
-        subtitle="SOL/BUSD"
+        v-for="(moeda, index) in money"
+        :key="index"
+        :imagem="moeda.image"
+        :title="moeda.high"
+        :subtitle="`${moeda.code}/${moeda.codein}`"
         :arrow="true"
       />
     </div>
