@@ -13,6 +13,10 @@ function getMoney() {
   });
 }
 
+function maskMoney(money: string) {
+  return `$ ${money.substr(0, 4)}`
+}
+
 getMoney();
 </script>
 
@@ -39,7 +43,7 @@ getMoney();
         v-for="(moeda, index) in money"
         :key="index"
         :imagem="moeda.image"
-        :title="moeda.high"
+        :title="maskMoney(moeda.high)"
         :subtitle="`${moeda.code}/${moeda.codein}`"
         :arrow="true"
       />
