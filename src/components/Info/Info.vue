@@ -14,7 +14,7 @@ function getMoney() {
 }
 
 function maskMoney(money: string) {
-  return `$ ${money.substr(0, 4)}`
+  return `$ ${money.substr(0, 4).replace('.',',')}`
 }
 
 getMoney();
