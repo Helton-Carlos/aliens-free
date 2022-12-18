@@ -22,7 +22,9 @@ function checkForm() {
 
     if (email.value && password.value) {
       api.get("/users").then((response) => {
-        response.data;
+        const { company } = response.data;
+
+        window.localStorage.setItem("localStorage", JSON.stringify(company));
       });
 
       router.push({ name: "home" });
@@ -34,7 +36,6 @@ function checkForm() {
     password.value = "";
   }, 2000);
 }
-
 </script>
 
 <template>

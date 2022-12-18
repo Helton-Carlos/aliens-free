@@ -34,4 +34,13 @@ const router = createRouter({
     routes,
 })
 
+router.beforeEach((to, from, next) => {
+    const before = localStorage.getItem("localStorage");
+    let login = JSON.parse(before);
+    if (to.fullPath !== "/home" && login === null) {
+      next({ name: "Index" });
+    }
+    next();
+  });
+
 export default router;
