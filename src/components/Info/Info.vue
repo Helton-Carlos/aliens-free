@@ -14,7 +14,7 @@ function getMoney() {
 }
 
 function maskMoney(money: string) {
-  return `$ ${money.substr(0, 4).replace('.',',')}`
+  return `$ ${money.substr(0, 4).replace(".", ",")}`;
 }
 
 getMoney();
@@ -24,29 +24,33 @@ getMoney();
   <div class="w-11/12 mx-auto">
     <div>
       <h3 class="text-lg font-semibold">Services</h3>
-      <Card
-        imagem="./src/assets/icon/Nave.svg"
-        title="P2P Trading"
-        subtitle="Bank Transfer, Paypal Revolut..."
-        :arrow="true"
-      />
-      <Card
-        imagem="./src/assets/icon/Card.svg"
-        title="P2P Trading"
-        subtitle="Bank Transfer, Paypal Revolut..."
-        :arrow="true"
-      />
+      <div class="md:flex md:gap-4">
+        <Card
+          imagem="./src/assets/icon/Nave.svg"
+          title="P2P Trading"
+          subtitle="Bank Transfer, Paypal Revolut..."
+          :arrow="true"
+        />
+        <Card
+          imagem="./src/assets/icon/Card.svg"
+          title="P2P Trading"
+          subtitle="Bank Transfer, Paypal Revolut..."
+          :arrow="true"
+        />
+      </div>
     </div>
     <div>
       <h3 class="text-lg font-semibold">Recent Coin</h3>
-      <Card
-        v-for="(moeda, index) in money"
-        :key="index"
-        :imagem="moeda.image"
-        :title="maskMoney(moeda.high)"
-        :subtitle="`${moeda.code}/${moeda.codein}`"
-        :arrow="true"
-      />
+      <div class="md:flex md:gap-4">
+        <Card
+          v-for="(moeda, index) in money"
+          :key="index"
+          :imagem="moeda.image"
+          :title="maskMoney(moeda.high)"
+          :subtitle="`${moeda.code}/${moeda.codein}`"
+          :arrow="true"
+        />
+      </div>
     </div>
   </div>
 </template>

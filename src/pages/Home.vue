@@ -21,7 +21,7 @@ function onIndex() {
       <Nav @onNotification="onNotification" @onIndex="onIndex" />
     </div>
 
-    <div class="bg-white w-full min-h-screen py-4">
+    <div class="bg-gray-light w-full min-h-screen py-4">
       <Info v-if="!pageValue"/>
       <Notification v-if="pageValue"/>
     </div>

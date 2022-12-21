@@ -23,10 +23,11 @@ function checkForm() {
     if (email.value && password.value) {
       api.get("/users").then((response) => {
         const { company } = response.data;
-        window.localStorage.setItem("localStorage", JSON.stringify(company));
 
-        router.push({ name: "home" });
+        window.localStorage.setItem("localStorage", JSON.stringify(company));
       });
+
+      router.push({ name: "home" });
     } else {
       alert("Preencha os campos");
     }
