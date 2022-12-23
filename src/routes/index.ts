@@ -4,7 +4,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
-    component: () => import("../pages/Home.vue"),  },
+    component: () => import("../pages/Home.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
   {
     path: "/cover",
     name: "cover",
@@ -21,10 +25,21 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/Sing/Sign.vue"),
   },
   {
+    path: "/notification",
+    name: "notificationView",
+    component: () => import("../pages/NotificationView.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
     path: "/notification/:id",
     name: "notification",
     props: true,
     component: () => import("../pages/Notification.vue"),
+    meta: {
+      navBar: true,
+    },
   },
 ];
 
@@ -33,9 +48,9 @@ const router = createRouter({
   routes,
 });
 
- router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   let login = JSON.parse(localStorage.getItem("localStorage"));
-  if (to.fullPath === "/") {
+  if (to.fullPath === "/" || to.fullPath === "/notification") {
     if (!login) {
       next({ name: "cover" });
     }
