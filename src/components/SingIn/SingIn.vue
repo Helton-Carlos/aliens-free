@@ -25,9 +25,9 @@ function checkForm() {
         const { company } = response.data;
 
         window.localStorage.setItem("localStorage", JSON.stringify(company));
-      });
 
-      router.push({ name: "home" });
+        router.push({ name: "home" });
+      });
     } else {
       alert("Preencha os campos");
     }

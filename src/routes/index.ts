@@ -3,8 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "index",
-    component: () => import("../pages/Index.vue"),
+    name: "home",
+    component: () => import("../pages/Home.vue"),  },
+  {
+    path: "/cover",
+    name: "cover",
+    component: () => import("../pages/Cover.vue"),
   },
   {
     path: "/boarding",
@@ -15,11 +19,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/sign",
     name: "sign",
     component: () => import("../pages/Sing/Sign.vue"),
-  },
-  {
-    path: "/home",
-    name: "home",
-    component: () => import("../pages/Home.vue"),
   },
   {
     path: "/notification/:id",
@@ -36,9 +35,9 @@ const router = createRouter({
 
  router.beforeEach((to, from, next) => {
   let login = JSON.parse(localStorage.getItem("localStorage"));
-  if (to.fullPath === "/home") {
+  if (to.fullPath === "/") {
     if (!login) {
-      next({ name: "index" });
+      next({ name: "cover" });
     }
   }
   next();
