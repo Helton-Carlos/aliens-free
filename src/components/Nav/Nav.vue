@@ -68,45 +68,65 @@ function onMenu() {
       </div>
     </div>
 
-    <div v-show="menuShow" class="flex justify-between items-center py-4">
-      <div class="text-center">
+    <div v-show="menuShow" class="flex justify-between items-center gap-4 mx-auto py-4">
+      <div class="text-center items-center">
         <img
-          src="../../assets/icon/Deposit.svg"
-          alt="Deposit"
-          class="cursor-pointer h-[50px] lg:h-[80px]"
+          src="../../assets/nav/Bitcon.svg"
+          alt="Bitcon"
+          class="cursor-pointer h-[25px]"
           @click="onSearch"
         />
-        <p class="text-gray">Deposit</p>
+        <p class="text-gray">Bitcon</p>
       </div>
 
       <div class="text-center">
         <img
-          src="../../assets/icon/Referral.svg"
-          alt="Referral"
-          class="cursor-pointer h-[50px] lg:h-[80px]"
+          src="../../assets/nav/Chart.svg"
+          alt="Chart"
+          class="cursor-pointer h-[20px]"
           @click="onSearch"
         />
-        <p class="text-gray">Referral</p>
+        <p class="text-gray">Chart</p>
       </div>
 
       <div class="text-center">
         <img
-          src="../../assets/icon/Grid-trading.svg"
-          alt="Grid-trading"
-          class="cursor-pointer h-[50px] lg:h-[80px]"
+          src="../../assets/nav/Extrato.svg"
+          alt="Extrat"
+          class="cursor-pointer h-[20px]"
           @click="onSearch"
         />
-        <p class="text-gray">Trading</p>
+        <p class="text-gray">Extrat</p>
       </div>
 
       <div class="text-center">
         <img
-          src="../../assets/icon/Savings.svg"
+          src="../../assets/nav/Investiment.svg"
+          alt="Investiment"
+          class="cursor-pointer h-[20px]"
+          @click="onSearch"
+        />
+        <p class="text-gray">Investiment</p>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../assets/nav/User.svg"
           alt="Savings"
-          class="cursor-pointer h-[50px] lg:h-[80px]"
+          class="cursor-pointer h-[20px]"
           @click="onSearch"
         />
-        <p class="text-gray">Savings</p>
+        <p class="text-gray">User</p>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../assets/nav/Exit.svg"
+          alt="Exit"
+          class="cursor-pointer h-[20px]"
+          @click="onSearch"
+        />
+        <p class="text-gray">Exit</p>
       </div>
     </div>
   </div>
