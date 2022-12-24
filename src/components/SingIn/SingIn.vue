@@ -2,11 +2,13 @@
 import Button from "../../components/Button/Button.vue";
 import Input from "../../components/Input/Input.vue";
 import Loading from "vue-loading-overlay";
+import { useCookies } from "vue3-cookies";
 import { useRouter } from "vue-router";
 import { api } from "../../server/axios";
 import { ref } from "vue";
 
 const router = useRouter();
+const { cookies } = useCookies();
 
 const email = ref<string>("");
 const password = ref<string>("");
@@ -25,6 +27,7 @@ function checkForm() {
         const { company } = response.data;
 
         window.localStorage.setItem("localStorage", JSON.stringify(company));
+        cookies.set("myCoookie", company[0].token);
 
         router.push({ name: "home" });
       });
