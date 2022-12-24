@@ -42,13 +42,13 @@ function bntSignUp() {
         <Button
           title="sign in"
           :color="btnColorIn"
-          class="w-[250px]"
+          class="md:w-[250px]"
           @onClick="bntSignIn()"
         />
         <Button
           title="sign up"
           :color="btnColorUp"
-          class="w-[250px]"
+          class="md:w-[250px]"
           @onClick="bntSignUp()"
         />
       </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Card from "../components//Card/Card.vue";
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { api } from "../server/axios";
 import { IInfo } from "../types/utilities";
 
