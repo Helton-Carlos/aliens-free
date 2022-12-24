@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { INav } from "./INav";
+import { useRouter } from "vue-router";
 import Input from "../../components/Input/Input.vue";
 
 defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 
 const name = ref<string>("Helton");
 const search = ref<string>("");
+const router = useRouter();
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
@@ -17,6 +20,25 @@ function onSearch() {
 function onMenu() {
   menuShow.value = !menuShow.value;
 }
+
+function onRouter(event: INav) {
+  menuShow.value = !menuShow.value;
+  if (event.name === "Exit") {
+    router.push({ name: "sign" });
+  } else {
+    window.localStorage.removeItem('localStorage');
+    router.push({ name: event.name });
+  }
+}
+
+const menuNav = ref<INav[]>([
+  { image: "./src/assets/nav/Bitcon.svg", name: "Bitcon" },
+  { image: "./src/assets/nav/Chart.svg", name: "Chart" },
+  { image: "./src/assets/nav/Extrato.svg", name: "Extrat" },
+  { image: "./src/assets/nav/Investiment.svg", name: "Investiment" },
+  { image: "./src/assets/nav/User.svg", name: "User" },
+  { image: "./src/assets/nav/Exit.svg", name: "Exit" },
+]);
 </script>
 
 <template>
@@ -68,72 +90,20 @@ function onMenu() {
       </div>
     </div>
 
-    <div v-show="menuShow" class="md:flex md:justify-between items-center gap-4 mx-auto py-4">
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
-        <img
-          src="../../assets/nav/Bitcon.svg"
-          alt="Bitcon"
-          class="h-[25px]"
-          @click="onSearch"
-        />
-        <p class="text-gray">Bitcon</p>
+    <div
+      v-show="menuShow"
+      class="md:flex md:justify-between items-center gap-4 mx-auto mt-7 pb-2"
+    >
+      <div
+        class="flex items-center gap-2 py-4 cursor-pointer md:py-0"
+        v-for="(Nav, Index) in menuNav"
+        :key="Index"
+        @click="onRouter(Nav)"
+      >
+        <img :src="Nav.image" :alt="Nav.name" class="w-[20px] md:h-[20px]" />
+        <p class="text-gray hover:text-green">{{ Nav.name }}</p>
+        <hr class="text-gray-light" />
       </div>
-      <hr class="text-gray-light">
-
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
-        <img
-          src="../../assets/nav/Chart.svg"
-          alt="Chart"
-          class="h-[20px]"
-          @click="onSearch"
-        />
-        <p class="text-gray">Chart</p>
-      </div>
-      <hr class="text-gray-light">
-
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
-        <img
-          src="../../assets/nav/Extrato.svg"
-          alt="Extrat"
-          class="h-[20px]"
-          @click="onSearch"
-        />
-        <p class="text-gray">Extrat</p>
-      </div>
-      <hr class="text-gray-light">
-
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0"  @click="onSearch">
-        <img
-          src="../../assets/nav/Investiment.svg"
-          alt="Investiment"
-          class="h-[20px]"
-          @click="onSearch"
-        />
-        <p class="text-gray">Investiment</p>
-      </div>
-      <hr class="text-gray-light">
-
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
-        <img
-          src="../../assets/nav/User.svg"
-          alt="Savings"
-          class="h-[20px]"
-          @click="onSearch"
-        />
-        <p class="text-gray">User</p>
-      </div>
-      <hr class="text-gray-light">
-
-      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
-        <img
-          src="../../assets/nav/Exit.svg"
-          alt="Exit"
-          class="h-[20px]"
-         
-        />
-        <p class="text-gray">Exit</p>
-      </div>
-      <hr class="text-gray-light">
     </div>
   </div>
 </template>

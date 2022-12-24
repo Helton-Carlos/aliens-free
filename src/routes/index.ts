@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/sign",
     name: "sign",
-    component: () => import("../pages/Sing/Sign.vue"),
+    component: () => import("../pages/sing/Sign.vue"),
   },
   {
     path: "/notification",
@@ -37,6 +37,54 @@ const routes: Array<RouteRecordRaw> = [
     name: "notification",
     props: true,
     component: () => import("../pages/Notification.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/bitcon",
+    name: "Bitcon",
+    component: () => import("../pages/navBar/Bitcon.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/chart",
+    name: "Chart",
+    component: () => import("../pages/navBar/Chart.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/extrat",
+    name: "Extrat",
+    component: () => import("../pages/navBar/Extrat.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/investiment",
+    name: "Investiment",
+    component: () => import("../pages/navBar/investiment.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/user",
+    name: "User",
+    component: () => import("../pages/navBar/user.vue"),
+    meta: {
+      navBar: true,
+    },
+  },
+  {
+    path: "/service",
+    name: "Service",
+    component: () => import("../pages/Service.vue"),
     meta: {
       navBar: true,
     },
