@@ -68,66 +68,72 @@ function onMenu() {
       </div>
     </div>
 
-    <div v-show="menuShow" class="flex justify-between items-center gap-4 mx-auto py-4">
-      <div class="text-center items-center">
+    <div v-show="menuShow" class="md:flex md:justify-between items-center gap-4 mx-auto py-4">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
         <img
           src="../../assets/nav/Bitcon.svg"
           alt="Bitcon"
-          class="cursor-pointer h-[25px]"
+          class="h-[25px]"
           @click="onSearch"
         />
         <p class="text-gray">Bitcon</p>
       </div>
+      <hr class="text-gray-light">
 
-      <div class="text-center">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
         <img
           src="../../assets/nav/Chart.svg"
           alt="Chart"
-          class="cursor-pointer h-[20px]"
+          class="h-[20px]"
           @click="onSearch"
         />
         <p class="text-gray">Chart</p>
       </div>
+      <hr class="text-gray-light">
 
-      <div class="text-center">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
         <img
           src="../../assets/nav/Extrato.svg"
           alt="Extrat"
-          class="cursor-pointer h-[20px]"
+          class="h-[20px]"
           @click="onSearch"
         />
         <p class="text-gray">Extrat</p>
       </div>
+      <hr class="text-gray-light">
 
-      <div class="text-center">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0"  @click="onSearch">
         <img
           src="../../assets/nav/Investiment.svg"
           alt="Investiment"
-          class="cursor-pointer h-[20px]"
+          class="h-[20px]"
           @click="onSearch"
         />
         <p class="text-gray">Investiment</p>
       </div>
+      <hr class="text-gray-light">
 
-      <div class="text-center">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
         <img
           src="../../assets/nav/User.svg"
           alt="Savings"
-          class="cursor-pointer h-[20px]"
+          class="h-[20px]"
           @click="onSearch"
         />
         <p class="text-gray">User</p>
       </div>
+      <hr class="text-gray-light">
 
-      <div class="text-center">
+      <div class="flex items-center gap-2 py-4 cursor-pointer md:py-0" @click="onSearch">
         <img
           src="../../assets/nav/Exit.svg"
           alt="Exit"
-          class="cursor-pointer h-[20px]"
-          @click="onSearch"
+          class="h-[20px]"
+         
         />
         <p class="text-gray">Exit</p>
       </div>
+      <hr class="text-gray-light">
     </div>
   </div>
 </template>
