@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import Card from "../components//Card/Card.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { api } from "../server/axios";
 import { IInfo } from "../types/utilities";
+import { useCookies } from "vue3-cookies";
 
 const money = ref<IInfo[]>([]);
+const { cookies } = useCookies();
 
 function getMoney() {
   api.get("/money").then((response) => {
@@ -16,6 +18,12 @@ function getMoney() {
 function maskMoney(money: string) {
   return `$ ${money.substr(0, 4).replace(".", ",")}`;
 }
+
+onMounted(() => {
+  let my_cookie_value = cookies.get("myCoookie");
+  console.log(my_cookie_value);
+  cookies.set("myCoookie", "abcdefg");
+});
 
 getMoney();
 </script>
