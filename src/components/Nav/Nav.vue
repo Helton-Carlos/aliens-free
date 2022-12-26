@@ -9,6 +9,7 @@ defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 const name = ref<string>("Helton");
 const search = ref<string>("");
 const router = useRouter();
+const value = ref<number>(200);
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
@@ -26,7 +27,7 @@ function onRouter(event: INav) {
   if (event.name === "Exit") {
     router.push({ name: "sign" });
   } else {
-    window.localStorage.removeItem('localStorage');
+    window.localStorage.removeItem("localStorage");
     router.push({ name: event.name });
   }
 }
@@ -51,9 +52,14 @@ const menuNav = ref<INav[]>([
           alt="user"
           @click="$emit('onIndex')"
         />
-        <p class="text-green font-medium px-2" v-if="!inputShow">
-          User: {{ name }}
-        </p>
+        <div class="text-green ">
+          <p class="font-medium px-2" v-if="!inputShow">
+            User: {{ name }}
+          </p>
+          <p class="font-medium px-2 flex" v-if="!inputShow">
+            Value: <div class="pl-1" id="value">{{ value }}</div> 
+          </p>
+        </div>
       </div>
 
       <div v-if="inputShow">

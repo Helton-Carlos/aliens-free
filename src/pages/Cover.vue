@@ -8,7 +8,7 @@ const router = useRouter()
 onMounted(()=> {
   setTimeout(()=>{
     router.push({ name: "boarding" })
-  }, 10000)
+  }, 800)
 })
 </script>
 
