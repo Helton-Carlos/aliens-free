@@ -25,9 +25,9 @@ function onMenu() {
 function onRouter(event: INav) {
   menuShow.value = !menuShow.value;
   if (event.name === "Exit") {
+    window.localStorage.removeItem("localStorage");
     router.push({ name: "sign" });
   } else {
-    window.localStorage.removeItem("localStorage");
     router.push({ name: event.name });
   }
 }
