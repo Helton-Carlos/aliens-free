@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Chart from "../../components/Chart/Chart.vue";
+import Table from "../../components/Table/Table.vue";
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import Chart from "../../components/Chart/Chart.vue";
     <div class="w-11/12 mx-auto">
       <h3 class="text-lg font-semibold">Extract</h3>
       <div class="md:flex md:gap-4">
-        <Chart />
+        <Table />
       </div>
     </div>
   </div>
