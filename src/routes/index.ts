@@ -58,9 +58,9 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/extrat",
-    name: "Extrat",
-    component: () => import("../pages/navBar/Extrat.vue"),
+    path: "/extract",
+    name: "Extract",
+    component: () => import("../pages/navBar/Extract.vue"),
     meta: {
       navBar: true,
     },

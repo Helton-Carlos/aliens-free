@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const series = ref<number[]>([42, 47, 52, 58, 65]);
+const series = ref<number[]>([42, 47, 52, 58, 65, 72]);
 const chartOptions = {
   chart: {
     width: 380,
     type: "polarArea",
   },
-  labels: ["Rose A", "Rose B", "Rose C", "Rose D", "Rose E"],
+  labels: ["Janeiro A", "Fevereiro B", "Março C", "Abril D", "Maio E", "Junho F"],
   fill: {
     opacity: 1,
   },
@@ -45,7 +45,6 @@ const chartOptions = {
   <div id="chart">
     <apexchart
       type="polarArea"
-      width="380"
       :options="chartOptions"
       :series="series"
     ></apexchart>

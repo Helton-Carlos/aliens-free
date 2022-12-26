@@ -35,7 +35,7 @@ function onRouter(event: INav) {
 const menuNav = ref<INav[]>([
   { image: "./src/assets/nav/Bitcon.svg", name: "Bitcon" },
   { image: "./src/assets/nav/Chart.svg", name: "Chart" },
-  { image: "./src/assets/nav/Extrato.svg", name: "Extrat" },
+  { image: "./src/assets/nav/Extrato.svg", name: "Extract" },
   { image: "./src/assets/nav/Investiment.svg", name: "Investiment" },
   { image: "./src/assets/nav/User.svg", name: "User" },
   { image: "./src/assets/nav/Exit.svg", name: "Exit" },
