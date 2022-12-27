@@ -98,7 +98,6 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   let login = JSON.parse(localStorage.getItem("localStorage"));
-  console.log(login);
   if (to.fullPath === "/" || to.fullPath === "/notification") {
     if (!login) {
       next({ name: "cover" });
