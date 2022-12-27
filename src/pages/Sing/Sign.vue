@@ -15,7 +15,7 @@ const btnColorIn = ref<string>("white");
 const btnColorUp = ref<string>("dark");
 
 function clickClose() {
-  router.push({ name: "index" });
+  router.push({ name: "cover" });
 }
 
 function bntSignIn() {
