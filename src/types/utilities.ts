@@ -15,3 +15,10 @@ export interface IInfo {
   timestamp: string;
   create_date: string;
 }
+
+export interface ITable {
+  day: number;
+  historic: string;
+  money: string;
+  status: string;
+}

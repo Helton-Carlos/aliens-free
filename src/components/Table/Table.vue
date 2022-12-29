@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Button from "../../components/Button/Button.vue";
+import { ITable } from "../../types/utilities";
+defineProps<{ infoTable: ITable[] }>();
 </script>
 
 <template>
@@ -38,48 +40,26 @@ import Button from "../../components/Button/Button.vue";
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-gray-100 border-b">
+                <tr class="bg-gray-100 border-b" v-for="table in infoTable">
                   <td
                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                   >
-                    1
+                    {{ table.day }}
                   </td>
                   <td
                     class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
                   >
-                    Mark
+                    {{ table.historic }}
                   </td>
                   <td
                     class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
                   >
-                    18.00
+                    {{ table.money }}
                   </td>
                   <td
                     class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
                   >
-                    Exit
-                  </td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <td
-                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                  >
-                    2
-                  </td>
-                  <td
-                    class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                  >
-                    Jacob
-                  </td>
-                  <td
-                    class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                  >
-                    20.00
-                  </td>
-                  <td
-                    class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                  >
-                    Prohibited
+                    {{ table.status }}
                   </td>
                 </tr>
               </tbody>
