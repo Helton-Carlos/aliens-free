@@ -16,8 +16,7 @@
     "vue-loading-overlay": "6.0",
     "vue-router": "^4.0.13",
     "vue3-apexcharts": "^1.4.1",
-    "vue3-cookies": "^1.0.6",
-    "vue3-html2pdf": "^1.1.2"
+    "vue3-cookies": "^1.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
