@@ -1,7 +1,41 @@
 <script setup lang="ts">
 import Button from "../../components/Button/Button.vue";
 import { ITable } from "../../types/utilities";
-defineProps<{ infoTable: ITable[] }>();
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+const table = defineProps<{ infoTable: ITable[] }>();
+
+function exportPdf() {
+  const info = table.infoTable;
+
+  var docDefinition = {
+    content: [
+      {
+        layout: "lightHorizontalLines", // optional
+        table: {
+          headerRows: 1,
+          widths: ["*", "auto", 100, "*"],
+          body: [
+            ["Day", "Historic", "Money", "Status"],
+            [
+              info.map((item) => item.day),
+              info.map((item) => item.historic),
+              info.map((item) => item.money),
+              info.map((item) => item.status),
+            ],
+            [{ text: "Extract", bold: true }, "-", "-", "500.00"],
+            //[{ text: "Bold value", bold: true }, "Val 2", "Val 3", "Val 4"],
+          ],
+        },
+      },
+    ],
+  };
+
+  pdfMake.createPdf(docDefinition).download();
+}
 </script>
 
 <template>
@@ -68,6 +102,10 @@ defineProps<{ infoTable: ITable[] }>();
         </div>
       </div>
     </div>
-    <Button title="DownLoad" class="py-2 my-2 w-full" type="submit" />
+    <Button
+      title="DownLoad"
+      class="py-2 my-2 w-full"
+      @click.prevent="exportPdf()"
+    />
   </div>
 </template>
