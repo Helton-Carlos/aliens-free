@@ -23,7 +23,7 @@ getMoney();
 <template>
   <div class="bg-gray-light w-full min-h-screen py-4">
     <div class="w-11/12 mx-auto">
-      <h3 class="text-lg font-semibold">Services</h3>
+      <h3 class="text-lg font-semibold">💵Services</h3>
       <div class="md:flex md:gap-4">
         <Card
           imagem="./src/assets/icon/Nave.svg"
@@ -38,7 +38,7 @@ getMoney();
           :arrow="true"
         />
       </div>
-      <h3 class="text-lg font-semibold">Recent Coin</h3>
+      <h3 class="text-lg font-semibold">💶Recent Coin</h3>
       <div class="md:flex md:gap-4">
         <Card
           v-for="(moeda, index) in money"
