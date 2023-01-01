@@ -9,7 +9,7 @@ defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 const name = ref<string>("Helton");
 const search = ref<string>("");
 const router = useRouter();
-const value = ref<number>(200);
+const money = ref<string>("200.00");
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
@@ -57,7 +57,7 @@ const menuNav = ref<INav[]>([
             User: {{ name }}
           </p>
           <p class="font-medium px-2 flex" v-if="!inputShow">
-            Value: <div class="pl-1" id="value">{{ value }}</div> 
+            Money: <div class="pl-1" id="value">{{ money }}</div> 
           </p>
         </div>
       </div>

@@ -13,8 +13,6 @@ if (process.env.NODE_ENV === "development") {
   makeServer()
 }
 
-const app = createApp(App);
-
 globalCookiesConfig({
   expireTimes: "1d",
   path: "/cover",
@@ -22,6 +20,8 @@ globalCookiesConfig({
   secure: true,
   sameSite: "None",
 });
+
+const app = createApp(App);
 
 app.use(Router);
 app.use(VueApexCharts);

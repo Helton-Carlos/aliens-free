@@ -8,8 +8,8 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', id: string | number): void
-}>()
+  (e: "update:modelValue", id: string | number): void;
+}>();
 
 function updateInput(event: any) {
   emit("update:modelValue", event.target.value);
@@ -21,11 +21,11 @@ function updateInput(event: any) {
     <label
       v-if="label"
       :for="id"
-      class="block mb-4 capitalize text-sm font-medium text-gray-900 dark:text-white"
+      class="block mb-1 capitalize text-sm font-medium text-gray-900 dark:text-white md:mb-4"
     >
       {{ label }}
     </label>
-    
+
     <input
       :id="id"
       :type="type"

@@ -7,6 +7,7 @@ import { ref } from "vue";
 const infoTable = ref<ITable[]>([
   { day: 2, historic: "deposito", money: "8.00", status: "into" },
   { day: 5, historic: "deposito", money: "8.50", status: "into" },
+  { day: 7, historic: "deposito", money: "12.50", status: "into" },
 ]);
 </script>
 

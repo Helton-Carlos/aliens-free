@@ -26,7 +26,7 @@ function exportPdf() {
               info.map((item) => item.money),
               info.map((item) => item.status),
             ],
-            [{ text: "Extract", bold: true }, "-", "-", "500.00"],
+            [{ text: "Extract", bold: true }, "-", "-", "200.00"],
             //[{ text: "Bold value", bold: true }, "Val 2", "Val 3", "Val 4"],
           ],
         },
