@@ -7,7 +7,7 @@ import Card from "../components//Card/Card.vue";
 
 const codeId = defineProps<{ id: number }>();
 
-const notes = ref<INotification[]>([]);
+const notes = ref<INotification>(null!);
 
 const isLoading = ref<boolean>(false);
 const fullPage = ref<boolean>(true);
