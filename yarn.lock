@@ -1792,7 +1792,7 @@
   "resolved" "https://registry.npmjs.org/vue-loading-overlay/-/vue-loading-overlay-6.0.2.tgz"
   "version" "6.0.2"
 
-"vue-router@^4.0.13":
+"vue-router@^4.1.6":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.1.6.tgz"
   "version" "4.1.6"
