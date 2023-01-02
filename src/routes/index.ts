@@ -76,7 +76,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/user",
     name: "User",
-    component: () => import("../pages/navBar/user.vue"),
+    component: () => import("../pages/navBar/User.vue"),
     meta: {
       navBar: true,
     },
