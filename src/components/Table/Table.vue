@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import Button from "../../components/Button/Button.vue";
 import { ITable } from "../../types/utilities";
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
-
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
+import * as pdfMake from 'pdfmake/build/pdfmake.js';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts.js';
+(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 const table = defineProps<{ infoTable: ITable[] }>();
 
 function exportPdf() {
