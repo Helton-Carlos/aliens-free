@@ -24,7 +24,7 @@ function onMenu() {
 
 function onRouter(event: INav) {
   menuShow.value = !menuShow.value;
-  if (event.name === "Exit") {
+  if (event.name === "exit") {
     window.localStorage.removeItem("localStorage");
     router.push({ name: "sign" });
   } else {
@@ -33,12 +33,12 @@ function onRouter(event: INav) {
 }
 
 const menuNav = ref<INav[]>([
-  { image: "./src/assets/nav/Bitcon.svg", name: "Bitcon" },
-  { image: "./src/assets/nav/Chart.svg", name: "Chart" },
-  { image: "./src/assets/nav/Extrato.svg", name: "Extract" },
-  { image: "./src/assets/nav/Investiment.svg", name: "Investiment" },
-  { image: "./src/assets/nav/User.svg", name: "User" },
-  { image: "./src/assets/nav/Exit.svg", name: "Exit" },
+  { image: "./src/assets/nav/Bitcon.svg", name: "bitcon" },
+  { image: "./src/assets/nav/Chart.svg", name: "chart" },
+  { image: "./src/assets/nav/Extrato.svg", name: "extract" },
+  { image: "./src/assets/nav/Investiment.svg", name: "investiment" },
+  { image: "./src/assets/nav/User.svg", name: "user" },
+  { image: "./src/assets/nav/Exit.svg", name: "exit" },
 ]);
 </script>
 
@@ -107,7 +107,7 @@ const menuNav = ref<INav[]>([
         @click="onRouter(Nav)"
       >
         <img :src="Nav.image" :alt="Nav.name" class="w-[20px] md:h-[20px]" />
-        <p class="text-gray hover:text-green">{{ Nav.name }}</p>
+        <p class="text-gray capitalize hover:text-green">{{ Nav.name }}</p>
         <hr class="text-gray-light" />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: () => import("../pages/Home.vue"),
     meta: {
       navBar: true,
@@ -11,17 +11,17 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/cover",
-    name: "Cover",
+    name: "cover",
     component: () => import("../pages/Cover.vue"),
   },
   {
     path: "/boarding",
-    name: "Boarding",
+    name: "boarding",
     component: () => import("../pages/Boarding.vue"),
   },
   {
     path: "/sign",
-    name: "Sign",
+    name: "sign",
     component: () => import("../pages/sing/Sign.vue"),
   },
   {
@@ -34,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/notification/:id",
-    name: "Notification",
+    name: "notification",
     props: true,
     component: () => import("../pages/Notification.vue"),
     meta: {
@@ -43,7 +43,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/bitcon",
-    name: "Bitcon",
+    name: "bitcon",
     component: () => import("../pages/navBar/Bitcon.vue"),
     meta: {
       navBar: true,
@@ -51,7 +51,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/chart",
-    name: "Chart",
+    name: "chart",
     component: () => import("../pages/navBar/Chart.vue"),
     meta: {
       navBar: true,
@@ -59,7 +59,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/extract",
-    name: "Extract",
+    name: "extract",
     component: () => import("../pages/navBar/Extract.vue"),
     meta: {
       navBar: true,
@@ -67,7 +67,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/investiment",
-    name: "Investiment",
+    name: "investiment",
     component: () => import("../pages/navBar/Investiment.vue"),
     meta: {
       navBar: true,
@@ -75,7 +75,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/user",
-    name: "User",
+    name: "user",
     component: () => import("../pages/navBar/User.vue"),
     meta: {
       navBar: true,
@@ -83,7 +83,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/service",
-    name: "Service",
+    name: "service",
     component: () => import("../pages/Service.vue"),
     meta: {
       navBar: true,
@@ -103,18 +103,26 @@ router.beforeEach((to, from, next) => {
     password: string;
     token: string;
   }
-  
-  let local = localStorage.getItem("localStorage");
 
-  if (typeof local === "string") {
-    let login: ILogin = JSON.parse(local);
-
-    if (to.fullPath === "/" || to.fullPath === "/notification") {
+  if (
+    to.fullPath === "/cover" ||
+    to.fullPath === "/boarding" ||
+    to.fullPath === "/sign"
+  ) {
+    next();
+  } else {
+    let local = localStorage.getItem("localStorage");
+    if (!local) {
+      next({ name: "cover" });
+    }
+    if (typeof local === "string") {
+      let login: ILogin = JSON.parse(local);
       if (!login) {
         next({ name: "cover" });
+      } else {
+        next();
       }
     }
-    next();
   }
 });
 
