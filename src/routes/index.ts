@@ -3,7 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
+    name: "Home",
     component: () => import("../pages/Home.vue"),
     meta: {
       navBar: true,
@@ -11,17 +11,17 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/cover",
-    name: "cover",
+    name: "Cover",
     component: () => import("../pages/Cover.vue"),
   },
   {
     path: "/boarding",
-    name: "boarding",
+    name: "Boarding",
     component: () => import("../pages/Boarding.vue"),
   },
   {
     path: "/sign",
-    name: "sign",
+    name: "Sign",
     component: () => import("../pages/sing/Sign.vue"),
   },
   {
@@ -34,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/notification/:id",
-    name: "notification",
+    name: "Notification",
     props: true,
     component: () => import("../pages/Notification.vue"),
     meta: {
