@@ -97,13 +97,25 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  let login = JSON.parse(localStorage.getItem("localStorage"));
-  if (to.fullPath === "/" || to.fullPath === "/notification") {
-    if (!login) {
-      next({ name: "cover" });
-    }
+  interface ILogin {
+    email: string;
+    id: number;
+    password: string;
+    token: string;
   }
-  next();
+  
+  let local = localStorage.getItem("localStorage");
+
+  if (typeof local === "string") {
+    let login: ILogin = JSON.parse(local);
+
+    if (to.fullPath === "/" || to.fullPath === "/notification") {
+      if (!login) {
+        next({ name: "cover" });
+      }
+    }
+    next();
+  }
 });
 
 export default router;

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Loading from "vue-loading-overlay";
 import { api } from "../server/axios";
-import Card from "../components/Card/Card.vue";
 import { useRouter } from "vue-router";
 import { INotification } from "../types/utilities";
+import Loading from "vue-loading-overlay";
+import Card from "../components/Card/Card.vue";
 
 const notes = ref<INotification[]>([]);
 
@@ -37,7 +37,7 @@ init();
         <h3 class="text-lg font-semibold">Notification</h3>
         <Card
           v-for="(note, index) in notes"
-          key="note"
+          :key="index"
           @click="onNotification(index)"
           :title="note.title"
           :subtitle="note.context"
