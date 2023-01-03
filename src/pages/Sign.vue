@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Close from "../../components/Icon/Close.vue";
-import Button from "../../components/Button/Button.vue";
-import SingIn from "../../components/SingIn/SingIn.vue";
-import SingUp from "../../components/SingUp/SingUp.vue";
+import Close from "../components/Icon/Close.vue";
+import Button from "../components/Button/Button.vue";
+import SingIn from "../components/SingIn/SingIn.vue";
+import SingUp from "../components/SingUp/SingUp.vue";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
 

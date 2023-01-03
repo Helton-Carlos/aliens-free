@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/sign",
     name: "sign",
-    component: () => import("../pages/sing/Sign.vue"),
+    component: () => import("../pages/Sign.vue"),
   },
   {
     path: "/notification",
