@@ -49,7 +49,7 @@ const menuNav = ref<INav[]>([
       <div class="flex items-center">
         <img
           class="h-10 w-10 rounded-full cursor-pointer"
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          :src="useUser.image"
           alt="user"
           @click="$emit('onIndex')"
         />
@@ -58,7 +58,7 @@ const menuNav = ref<INav[]>([
             User: {{ useUser.user }}
           </p>
           <p class="font-medium px-2 flex" v-if="!inputShow">
-            Money: <div class="pl-1" id="value">{{ money }}</div> 
+            Money: <div class="pl-1" id="value">{{ useUser.money }}</div> 
           </p>
         </div>
       </div>
