@@ -16,12 +16,10 @@ const useUser = useUserStore();
           :src="useUser.image"
           :alt="useUser.user"
         />
-        <h5 class="text-xl font-medium text-blue ">
+        <h5 class="text-xl font-medium text-blue">
           {{ useUser.user }}
         </h5>
-        <span class="text-sm text-green-500"
-          >Visual Designer</span
-        >
+        <span class="text-sm text-green-500">{{ useUser.profession }}</span>
         <div class="flex m-2 space-x-3">
           <Button title="Change" class="py-2 my-2 w-full" />
           <Button title="To edit" class="py-2 my-2 w-full" />
