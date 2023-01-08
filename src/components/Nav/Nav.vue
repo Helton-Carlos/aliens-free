@@ -10,7 +10,6 @@ defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 const useUser = useUserStore();
 const search = ref<string>("");
 const router = useRouter();
-const money = ref<string>("200.00");
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
