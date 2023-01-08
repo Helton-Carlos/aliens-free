@@ -2,11 +2,12 @@
 import { ref } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
+import { useUserStore } from "../../store/index";
 import Input from "../../components/Input/Input.vue";
 
 defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 
-const name = ref<string>("Helton");
+const useUser = useUserStore();
 const search = ref<string>("");
 const router = useRouter();
 const money = ref<string>("200.00");
@@ -54,7 +55,7 @@ const menuNav = ref<INav[]>([
         />
         <div class="text-green ">
           <p class="font-medium px-2" v-if="!inputShow">
-            User: {{ name }}
+            User: {{ useUser.user }}
           </p>
           <p class="font-medium px-2 flex" v-if="!inputShow">
             Money: <div class="pl-1" id="value">{{ money }}</div> 
