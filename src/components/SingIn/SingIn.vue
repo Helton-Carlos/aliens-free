@@ -24,10 +24,10 @@ function checkForm() {
 
     if (email.value && password.value) {
       api.get("/users").then((response) => {
-        const { company } = response.data;
+        const { client } = response.data;
 
-        window.localStorage.setItem("localStorage", JSON.stringify(company));
-        cookies.set("myCoookie", company[0].token);
+        window.localStorage.setItem("localStorage", JSON.stringify(client));
+        cookies.set("myCoookie", client[0].token);
 
         router.push({ name: "home" });
       });
