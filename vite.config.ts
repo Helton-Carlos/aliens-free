@@ -6,6 +6,7 @@ import VueTypeImports from 'vite-plugin-vue-type-imports'
 export default defineConfig({
   plugins: [
     VueTypeImports(),
-    vue()
+    vue(),
+    
   ]
 })
