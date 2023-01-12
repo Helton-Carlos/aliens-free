@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [
     VueTypeImports(),
     vue(),
-    
-  ]
+  ], 
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
 })
