@@ -10,6 +10,7 @@ const notes = ref<INotification[]>([]);
 
 const isLoading = ref<boolean>(false);
 const fullPage = ref<boolean>(true);
+const widthLoading = ref<number>(50);
 
 const router = useRouter();
 
@@ -48,7 +49,7 @@ init();
           v-model:active="isLoading"
           color="#5ED5A8"
           loader="spinner"
-          width="50"
+          :width="widthLoading"
           background-color="#000000"
           :is-full-page="fullPage"
         />

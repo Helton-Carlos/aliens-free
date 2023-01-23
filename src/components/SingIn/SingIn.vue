@@ -14,6 +14,7 @@ const email = ref<string>("");
 const password = ref<string>("");
 
 const isLoading = ref<boolean>(false);
+const widthLoading = ref<number>(50);
 const fullPage = ref<boolean>(true);
 
 function checkForm() {
@@ -72,7 +73,7 @@ function checkForm() {
         v-model:active="isLoading"
         color="#5ED5A8"
         loader="spinner"
-        width="50px"
+        :width="widthLoading"
         background-color="#000000"
         :can-cancel="true"
         :is-full-page="fullPage"

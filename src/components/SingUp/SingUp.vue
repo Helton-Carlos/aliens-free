@@ -12,6 +12,7 @@ const name = ref<string>("");
 const email = ref<string>("");
 const password = ref<string>("");
 const passwordConfirm = ref<string>("");
+const widthLoading = ref<number>(50);
 
 const isLoading = ref<boolean>(false);
 const fullPage = ref<boolean>(true);
@@ -67,7 +68,7 @@ function checkForm() {
         class="mb-4"
       />
       <Input
-        id="password"
+        id="password-confirm"
         type="password"
         label="Confirm the password"
         placeholder="Confirm the password"
@@ -84,7 +85,7 @@ function checkForm() {
         v-model:active="isLoading"
         color="#5ED5A8"
         loader="spinner"
-        width="50px"
+        :width="widthLoading"
         background-color="#000000"
         :can-cancel="true"
         :is-full-page="fullPage"

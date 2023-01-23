@@ -6,6 +6,7 @@ import Loading from "vue-loading-overlay";
 import Card from "../components//Card/Card.vue";
 
 const codeId = defineProps<{ id: number }>();
+const widthLoading = ref<number>(50);
 
 const notes = ref<INotification>(null!);
 
@@ -41,7 +42,7 @@ getNotification();
         v-model:active="isLoading"
         color="#5ED5A8"
         loader="spinner"
-        width="50px"
+        :width="widthLoading"
         background-color="#000000"
         :can-cancel="true"
         :is-full-page="fullPage"
