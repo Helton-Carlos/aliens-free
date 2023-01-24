@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Chart from "../../components//Chart/Chart.vue";
+import Chart from "@/components/Chart/Chart.vue";
 </script>
 
 <template>

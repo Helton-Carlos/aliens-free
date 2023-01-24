@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { api } from "../server/axios";
+import { api } from "@/server/axios";
 import { useRouter } from "vue-router";
-import { INotification } from "../types/utilities";
+import { INotification } from "@/types/utilities";
 import Loading from "vue-loading-overlay";
-import Card from "../components/Card/Card.vue";
+import Card from "@/components/Card/Card.vue";
 
 const notes = ref<INotification[]>([]);
 

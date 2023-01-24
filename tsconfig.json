@@ -25,6 +25,13 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@/*": ["*", "src/*"],
+      "@/assets/*": ["*", "src/assets/*"],
+      "@/server/*": ["*", "src/server/*"],
+      "@/types/*": ["*", "src/types/*"],
+      "@/component/*": ["*", "src/components/*"],
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

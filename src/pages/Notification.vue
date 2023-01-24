@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { INotification } from "../types/utilities";
-import { api } from "../server/axios";
+import { INotification } from "@/types/utilities";
+import { api } from "@/server/axios";
 import Loading from "vue-loading-overlay";
-import Card from "../components//Card/Card.vue";
+import Card from "@/components/Card/Card.vue";
 
 const codeId = defineProps<{ id: number }>();
 const widthLoading = ref<number>(50);

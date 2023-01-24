@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Onboarding from "../components/Onboarding/Onboarding.vue";
+import Onboarding from "@/components/Onboarding/Onboarding.vue";
 </script>
 
 <template>

@@ -23,7 +23,7 @@ defineProps<{
         class="inline-flex items-center text-base font-semibold bg-gray p-2 rounded-lg"
         v-show="arrow"
       >
-        <img src="../../assets/icon/Seta.svg" alt="Seta" class="h-3" />
+        <img src="@/assets/icon/Seta.svg" alt="Seta" class="h-3" />
       </div>
     </div>
   </div>
