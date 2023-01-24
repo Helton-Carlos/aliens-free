@@ -105,6 +105,7 @@ router.beforeEach((to, from, next) => {
   }
 
   if (
+    from &&
     to.fullPath === "/cover" ||
     to.fullPath === "/boarding" ||
     to.fullPath === "/sign"
