@@ -102,11 +102,14 @@ router.beforeEach((to, from, next) => {
     id: number;
     password: string;
     token: string;
+    user: string;
+    age: string;
+    money: string;
+    image: string;
   }
 
   if (
-    from &&
-    to.fullPath === "/cover" ||
+    (from && to.fullPath === "/cover") ||
     to.fullPath === "/boarding" ||
     to.fullPath === "/sign"
   ) {
