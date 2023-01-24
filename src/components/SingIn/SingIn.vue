@@ -25,10 +25,13 @@ function checkForm() {
 
     if (email.value && password.value) {
       api.get("/users").then((response) => {
-        const { client } = response.data;
+        const { id, user, email, token, money, image } = response.data.client[0];
 
-        window.localStorage.setItem("localStorage", JSON.stringify(client));
-        cookies.set("myCoookie", client[0].token);
+        window.localStorage.setItem(
+          "localStorage",
+          JSON.stringify({ id, user, email, token, money, image})
+        );
+        cookies.set("myCoookie", token);
 
         router.push({ name: "home" });
       });
