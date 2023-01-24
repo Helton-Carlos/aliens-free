@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../../store/index";
-import Input from "../../components/Input/Input.vue";
+import Input from "@/components/Input/Input.vue";
 
 defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
 
@@ -74,21 +74,21 @@ const menuNav = ref<INav[]>([
 
       <div class="flex items-center">
         <img
-          src="../../assets/icon/Lupa.svg"
+          src="@/assets/icon/Lupa.svg"
           alt="Lupa"
           class="cursor-pointer pr-2"
           @click="onSearch"
         />
         <img
           v-if="!inputShow"
-          src="../../assets/icon/Menu.svg"
+          src="@/assets/icon/Menu.svg"
           alt="Menu"
           class="cursor-pointer px-2"
           @click="onMenu"
         />
         <img
           v-if="!inputShow"
-          src="../../assets/icon/Notificacao.svg"
+          src="@/assets/icon/Notificacao.svg"
           alt="Notificação"
           class="cursor-pointer"
           @click="$emit('onNotification')"

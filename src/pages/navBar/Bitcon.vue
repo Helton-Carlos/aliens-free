@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Card from "../../components//Card/Card.vue";
+import Card from "@/components/Card/Card.vue";
 import { ref } from "vue";
-import { api } from "../../server/axios";
-import { IInfo } from "../../types/utilities";
+import { api } from "@/server/axios";
+import { IInfo } from "@/types/utilities";
 
 const money = ref<IInfo[]>([]);
 

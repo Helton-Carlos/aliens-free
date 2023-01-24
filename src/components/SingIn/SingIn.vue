@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Button from "../../components/Button/Button.vue";
-import Input from "../../components/Input/Input.vue";
+import Button from "@/components/Button/Button.vue";
+import Input from "@/components/Input/Input.vue";
 import Loading from "vue-loading-overlay";
 import { useCookies } from "vue3-cookies";
 import { useRouter } from "vue-router";
-import { api } from "../../server/axios";
+import { api } from "@/server/axios";
 import { ref } from "vue";
 
 const router = useRouter();

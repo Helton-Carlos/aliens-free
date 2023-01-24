@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter  } from 'vue-router';
 import { onMounted } from 'vue';
-import Icon from '../components/Icon/Icon.vue';
+import Icon from '@/components/Icon/Icon.vue';
 
 const router = useRouter()
 

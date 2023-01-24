@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Table from "../../components/Table/Table.vue";
-import { ITable } from "../../types/utilities";
+import Table from "@/components/Table/Table.vue";
+import { ITable } from "@/types/utilities";
 import { ref } from "vue";
 
 const infoTable = ref<ITable[]>([
