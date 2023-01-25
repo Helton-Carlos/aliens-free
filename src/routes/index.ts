@@ -47,6 +47,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/navBar/Bitcon.vue"),
     meta: {
       navBar: true,
+      title: "Bitcon"
     },
   },
   {
@@ -55,6 +56,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/navBar/Chart.vue"),
     meta: {
       navBar: true,
+      title: "Chart-Month"
     },
   },
   {
@@ -63,6 +65,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/navBar/Extract.vue"),
     meta: {
       navBar: true,
+      title: "Extract"
     },
   },
   {
@@ -71,6 +74,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/navBar/Investiment.vue"),
     meta: {
       navBar: true,
+      title: "Investiment"
     },
   },
   {
@@ -79,6 +83,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/navBar/User.vue"),
     meta: {
       navBar: true,
+      title: "User"
     },
   },
   {

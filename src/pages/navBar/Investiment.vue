@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRoute  } from "vue-router";
 import Table from "@/components/Table/Table.vue";
 import Chart from "@/components/Chart/Chart.vue";
 import { ITable } from "@/types/utilities";
@@ -9,13 +10,15 @@ const infoTable = ref<ITable[]>([
   { day: 5, historic: "deposito", money: "8.50", status: "into" },
   { day: 7, historic: "deposito", money: "12.50", status: "into" },
 ]);
+
+const route = useRoute ();
 </script>
 
 <template>
   <div class="bg-white w-full min-h-screen py-4">
     <div class="w-11/12 mx-auto md:flex md:gap-4">
       <div>
-        <h3 class="text-lg font-semibold">💹Investiment-Table</h3>
+        <h3 class="text-lg font-semibold">💹{{route.meta.title}}</h3>
         <div class="md:flex md:gap-4">
           <Table :infoTable="infoTable" />
         </div>
