@@ -25,11 +25,12 @@ function checkForm() {
 
     if (email.value && password.value) {
       api.get("/users").then((response) => {
-        const { id, user, email, token, money, image } = response.data.client[0];
+        const { id, user, email, token, money, image } =
+          response.data.client[0];
 
         window.localStorage.setItem(
           "localStorage",
-          JSON.stringify({ id, user, email, token, money, image})
+          JSON.stringify({ id, user, email, token, money, image })
         );
         cookies.set("myCoookie", token);
 
@@ -47,7 +48,9 @@ function checkForm() {
 
 <template>
   <div>
-    <h2 class="text-white p-2 text-lg font-bold">Sign in</h2>
+    <div>
+      <img src="@/assets/ilustration-login.svg" alt="user-astronaut" class="mx-auto" />
+    </div>
 
     <form class="mx-5 flex justify-center flex-col" @submit.prevent="checkForm">
       <Input

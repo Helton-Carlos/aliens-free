@@ -14,8 +14,8 @@ onMounted(()=> {
 
 <template>
   <div class="h-screen lg:items-center lg:flex lg:justify-center">
-    <div class="m-4 mt-10 lg:mt-4">
-      <img src="../assets/Jato.svg" alt="Jato" />
+    <div class="m-4 pt-8 mt-10 lg:mt-4 md:pt-0">
+      <img src="@/assets/Jato.svg" alt="Jato" class="w-[320px] mx-auto" />
     </div>
     
     <div class="mx-4 lg:w-[450px]">
