@@ -33,6 +33,6 @@
       "@/component/*": ["*", "src/components/*"],
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./jest-setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
