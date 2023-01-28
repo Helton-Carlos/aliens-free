@@ -5,7 +5,7 @@ defineEmits<{ (e:'onClick'): void }>();
 
 <template>
   <button
-    class="px-7 py-1 rounded drop-shadow-md"
+    class="px-7 py-1 rounded drop-shadow-md font-medium"
     :class="{
       'bg-green hover:bg-green-hover': color == null,
       'bg-dark text-white hover:text-gray': color === 'dark',
@@ -13,6 +13,6 @@ defineEmits<{ (e:'onClick'): void }>();
     }"
     @click="$emit('onClick')"
   >
-    <p class="font-medium">{{ title }}</p>
+    {{ title }}
   </button>
 </template>
