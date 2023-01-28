@@ -8,7 +8,7 @@ describe("Card component", () => {
     expect(component).toBeDefined();
   });
 
-  test.only("Props Card", () => {
+  test("Props Card", () => {
     const component = render(Card, {
       props: {
         title: "name card",
