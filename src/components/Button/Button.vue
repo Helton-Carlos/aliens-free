@@ -5,6 +5,7 @@ defineEmits<{ (e:'onClick'): void }>();
 
 <template>
   <button
+    data-testid="button"
     class="px-7 py-1 rounded drop-shadow-md font-medium"
     :class="{
       'bg-green hover:bg-green-hover': color == null,
