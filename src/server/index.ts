@@ -74,7 +74,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/notification", () => ({
         note: [
           {
-            title: "increase in dollar",
+            title: "Increase in dollar",
             context:
               "The U.S. dollar is strengthening because the Fed adopted a hawkish monetary policy stance in response to skyrocketing inflation.",
             imagem: "../src/assets/icon/Aliens.svg",

@@ -2,7 +2,7 @@ import { render } from "@testing-library/vue";
 import Card from "./Card.vue";
 
 describe("Card component", () => {
-  test("Render Button", () => {
+  test("Render Card", () => {
     const component = render(Card);
 
     expect(component).toBeDefined();
@@ -11,17 +11,16 @@ describe("Card component", () => {
   test("Props Card", () => {
     const component = render(Card, {
       props: {
-        title: "name card",
-        subtitle: "context",
+        title: "Down of the EURO",
+        subtitle: "We look at three important factors that affect U.S. dollar value, and how to determine",
         imagem: "@/assets/card.jpg",
-        arrow: true,
       },
     });
 
     const imgProps = document.querySelector("img") as HTMLImageElement;
     
-    expect(component.getByText("name card")).toBeDefined();
-    expect(component.getByText("context")).toBeDefined();
+    expect(component.getByText("Down of the EURO")).toBeDefined();
+    expect(component.getByText("We look at three important factors that affect U.S. dollar value, and how to determine")).toBeDefined();
     expect(imgProps.src).toContain("@/assets/card.jpg");
   });
 });
