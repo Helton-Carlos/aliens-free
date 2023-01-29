@@ -5,8 +5,6 @@ import { useRouter } from "vue-router";
 import { useUserStore } from "../../store/index";
 import Input from "@/components/Input/Input.vue";
 
-defineEmits<{ (e: "onNotification"): void; (e: "onIndex"): void }>();
-
 const useUser = useUserStore();
 const search = ref<string>("");
 const router = useRouter();
@@ -14,12 +12,22 @@ const router = useRouter();
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
 
+function onNotification() {
+  menuShow.value = false;
+  router.push({ name: 'notificationView'});
+}
+
 function onSearch() {
   inputShow.value = !inputShow.value;
 }
 
 function onMenu() {
   menuShow.value = !menuShow.value;
+}
+
+function onIndex() {
+  menuShow.value = false;
+  router.push({ name: 'home'});
 }
 
 function onRouter(event: INav) {
@@ -50,7 +58,7 @@ const menuNav = ref<INav[]>([
           class="h-10 w-10 rounded-full cursor-pointer"
           :src="useUser.users?.image"
           alt="user"
-          @click="$emit('onIndex')"
+          @click="onIndex()"
         />
         <div class="text-green ">
           <p class="font-medium px-2" v-if="!inputShow">
@@ -91,7 +99,7 @@ const menuNav = ref<INav[]>([
           src="@/assets/icon/Notificacao.svg"
           alt="Notificação"
           class="cursor-pointer"
-          @click="$emit('onNotification')"
+          @click="onNotification"
         />
       </div>
     </div>
