@@ -13,13 +13,15 @@ const useUser = useUserStore();
       <div class="flex flex-col items-center mt-4">
         <img
           class="w-24 h-24 mb-3 rounded-full shadow-lg"
-          :src="useUser.image"
-          :alt="useUser.user"
+          :src="useUser.users?.image"
+          :alt="useUser.users?.user"
         />
         <h5 class="text-xl font-medium text-blue">
-          {{ useUser.user }}
+          {{ useUser.users?.user }}
         </h5>
-        <span class="text-sm text-green-500">{{ useUser.profession }}</span>
+        <span class="text-sm text-green-500">{{
+          useUser.users?.profession
+        }}</span>
         <div class="flex m-2 space-x-3">
           <Button title="Change" class="py-2 my-2 w-full" />
           <Button title="To edit" class="py-2 my-2 w-full" />
