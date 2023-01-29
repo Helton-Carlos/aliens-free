@@ -26,13 +26,13 @@ getMoney();
       <h3 class="text-lg font-semibold">💵Services</h3>
       <div class="md:flex md:gap-4">
         <Card
-          imagem="./src/assets/icon/Nave.svg"
+          image="./src/assets/icon/Nave.svg"
           title="P2P Trading"
           subtitle="Bank Transfer, Paypal Revolut..."
           :arrow="true"
         />
         <Card
-          imagem="./src/assets/icon/Card.svg"
+          image="./src/assets/icon/Card.svg"
           title="P2P Trading"
           subtitle="Bank Transfer, Paypal Revolut..."
           :arrow="true"
@@ -43,7 +43,7 @@ getMoney();
         <Card
           v-for="(moeda, index) in money"
           :key="index"
-          :imagem="moeda.image"
+          :image="moeda.image"
           :title="maskMoney(moeda.high)"
           :subtitle="`${moeda.code}/${moeda.codein}`"
           :arrow="true"

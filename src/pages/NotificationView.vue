@@ -42,7 +42,7 @@ init();
           @click="onNotification(index)"
           :title="note.title"
           :subtitle="note.context"
-          :imagem="note.imagem"
+          :image="note.image"
           :arrow="true"
         />
         <loading

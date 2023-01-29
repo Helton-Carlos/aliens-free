@@ -13,7 +13,7 @@ describe("Card component", () => {
       props: {
         title: "Down of the EURO",
         subtitle: "We look at three important factors that affect U.S. dollar value, and how to determine",
-        imagem: "@/assets/card.jpg",
+        image: "@/assets/card.jpg",
         arrow: true
       },
     });

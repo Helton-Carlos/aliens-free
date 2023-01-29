@@ -1,7 +1,7 @@
 export interface INotification {
   title: string;
   context: string;
-  imagem: string;
+  image: string;
 }
 
 export interface IInfo {

@@ -30,7 +30,7 @@ getMoney();
         <Card
           v-for="(moeda, index) in money"
           :key="index"
-          :imagem="moeda.image"
+          :image="moeda.image"
           :title="maskMoney(moeda.high)"
           :subtitle="`${moeda.code}/${moeda.codein}`"
           :arrow="true"

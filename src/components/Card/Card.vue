@@ -2,7 +2,7 @@
 defineProps<{
   title: string;
   subtitle: string;
-  imagem: string;
+  image: string;
   arrow: boolean;
 }>();
 </script>
@@ -11,7 +11,7 @@ defineProps<{
   <div class="p-4 mb-4 bg-white rounded-lg shadow-md md:w-full cursor-pointer">
     <div class="flex items-center space-x-4">
       <div class="flex-shrink-0">
-        <img class="w-12 h-12" :src="imagem" :alt="title" />
+        <img class="w-12 h-12" :src="image" :alt="title" />
       </div>
       <div class="flex-1 min-w-0">
         <p class="text-sm font-medium text-gray-full truncate capitalize">

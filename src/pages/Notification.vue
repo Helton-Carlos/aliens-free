@@ -30,7 +30,7 @@ getNotification();
     <div class="bg-white w-full min-h-screen py-4">
       <div class="w-11/12 mx-auto">
         <Card
-          :imagem="notes.imagem"
+          :image="notes.image"
           :title="notes.title"
           :subtitle="notes.context"
           :arrow="false"
