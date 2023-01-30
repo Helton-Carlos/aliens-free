@@ -27,6 +27,7 @@ function updateInput(event: any) {
     </label>
 
     <input
+      data-testid="add-word-input"
       :id="id"
       :type="type"
       :value="modelValue"
