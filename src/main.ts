@@ -7,7 +7,7 @@ import VueApexCharts from "vue3-apexcharts";
 import { globalCookiesConfig } from "vue3-cookies";
 import { makeServer } from "@/server/index";
 import { LoadingPlugin } from 'vue-loading-overlay';
-import { createPinia } from 'pinia';
+import { createPinia } from "pinia";
 import 'vue-loading-overlay/dist/css/index.css';
 
 if (process.env.NODE_ENV === "development") {

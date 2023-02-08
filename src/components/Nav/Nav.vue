@@ -5,9 +5,13 @@ import { useRouter } from "vue-router";
 import { useUserStore } from "../../store/index";
 import Input from "@/components/Input/Input.vue";
 
-const useUser = useUserStore();
 const search = ref<string>("");
 const router = useRouter();
+
+const useUser = useUserStore();
+const image = computed(() => useUser.users?.image);
+const user = computed(() => useUser.users?.user );
+const money = computed(() => useUser.users?.money );
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
@@ -39,9 +43,6 @@ function onRouter(event: INav) {
     router.push({ name: event.name });
   }
 }
-const image = computed(() => useUser.users?.image);
-const user = computed(() => useUser.users?.user );
-const money = computed(() => useUser.users?.money );
 
 const menuNav = ref<INav[]>([
   { image: "./src/assets/nav/Bitcon.svg", name: "bitcon" },
