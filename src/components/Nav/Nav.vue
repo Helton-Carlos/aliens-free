@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../../store/index";
@@ -39,6 +39,9 @@ function onRouter(event: INav) {
     router.push({ name: event.name });
   }
 }
+const image = computed(() => useUser.users?.image);
+const user = computed(() => useUser.users?.user );
+const money = computed(() => useUser.users?.money );
 
 const menuNav = ref<INav[]>([
   { image: "./src/assets/nav/Bitcon.svg", name: "bitcon" },
@@ -56,16 +59,16 @@ const menuNav = ref<INav[]>([
       <div class="flex items-center">
         <img
           class="h-10 w-10 rounded-full cursor-pointer"
-          :src="useUser.users?.image"
+          :src="image"
           alt="user"
           @click="onIndex()"
         />
         <div class="text-green ">
           <p class="font-medium px-2" v-if="!inputShow">
-            User: {{ useUser.users?.user }}
+            User: {{ user }}
           </p>
           <p class="font-medium px-2 flex" v-if="!inputShow">
-            Money: <div class="pl-1" id="value">{{ useUser.users?.money}}</div> 
+            Money: <div class="pl-1" id="value">{{ money }}</div> 
           </p>
         </div>
       </div>
