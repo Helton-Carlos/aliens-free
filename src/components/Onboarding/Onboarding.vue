@@ -14,15 +14,15 @@ function allCount(index: number) {
 }
 
 function bntNext() {
-  count.value < 2? count.value++ : router.push({ name: "sign" });
+  count.value < 2 ? count.value++ : router.push({ name: "sign" });
 }
 </script>
 
 <template>
   <div class="text-center w-5/6">
     <img :src="board[count].image" :alt="board[count].title" class="m-auto h-[55%] mt-4" />
-    <h3 class="text-white pt-4 font-medium animate__backInRight">{{ board[count].title }}</h3>
-    <p class="text-gray-medio pt-2 text-sm">
+    <h3 class="text-white pt-4 font-medium animate__backInRight" data-testid="title-id">{{ board[count].title }}</h3>
+    <p class="text-gray-medio pt-2 text-sm" data-testid="subtitle-id">
       {{ board[count].subtitle }}
     </p>
 
@@ -32,6 +32,6 @@ function bntNext() {
       <Ellipse :value='count === 2' @onClick='allCount(2)'/>
     </div>
 
-    <Button title="Next" class="m-2" @onClick='bntNext()' />
+    <Button title="Next" class="m-2" @onClick='bntNext()' data-testid="btn-id" />
   </div>
 </template>
