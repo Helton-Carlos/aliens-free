@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
-import { useUserStore } from "../../store/index";
+import { useUserStore } from "@/store/index";
 import Input from "@/components/Input/Input.vue";
 
 const search = ref<string>("");

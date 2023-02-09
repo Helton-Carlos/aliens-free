@@ -29,6 +29,7 @@
       "@/*": ["*", "src/*"],
       "@/assets/*": ["*", "src/assets/*"],
       "@/server/*": ["*", "src/server/*"],
+      "@/store/*": ["*", "src/store/*"],
       "@/types/*": ["*", "src/types/*"],
       "@/component/*": ["*", "src/components/*"],
     }
