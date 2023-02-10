@@ -56,10 +56,11 @@ function checkForm() {
       <Input
         id="email"
         type="email"
-        label="email"
+        label="E-mail"
         placeholder="Enter your email"
         v-model:modelValue="email"
         class="mb-4"
+        data-testid="email-id"
       />
       <Input
         id="password"
@@ -68,9 +69,10 @@ function checkForm() {
         placeholder="Enter your password"
         v-model:modelValue="password"
         class="mb-4"
+        data-testid="password-id"
       />
 
-      <Button title="Sign in" class="py-2 my-2 w-full" type="submit" />
+      <Button title="Sign in" class="py-2 my-2 w-full" type="submit" data-testid="btn-id"  />
     </form>
 
     <div class="vl-parent">
