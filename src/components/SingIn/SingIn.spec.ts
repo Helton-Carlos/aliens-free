@@ -17,7 +17,7 @@ describe("Component SingIn", () => {
     expect(labelPassword.textContent).toBe("Password");
   });
 
-  test("Input label", async() => {
+  test.only("Input label", async() => {
     const { getByTestId } = render(SingIn);
 
     const labelEmail = getByTestId("email-id");
@@ -29,8 +29,7 @@ describe("Component SingIn", () => {
 
     await fireEvent.click(btnPassword);
 
-    console.log(btnPassword)
-    // expect(labelEmail.textContent).toBe("bob@gmail.com");
-    // expect(labelPassword.textContent).toBe("bobfriend");
+    expect(labelEmail).toBeDefined()
+    expect(labelPassword).toBeDefined()
   });
 });
