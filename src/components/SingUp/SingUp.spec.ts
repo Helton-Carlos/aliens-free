@@ -1,15 +1,15 @@
 import { render, fireEvent } from "@testing-library/vue";
-import SingUP from "./SingUP.vue";
+import SingUp from "./SingUp.vue";
 
-describe("Component SingUP", () => {
-  test("SingUP Render", () => {
-    const component = render(SingUP);
+describe("Component SingUp", () => {
+  test("SingUp Render", () => {
+    const component = render(SingUp);
 
     expect(component).toBeDefined();
   });
 
   test("Input label", () => {
-    const { getByTestId } = render(SingUP);
+    const { getByTestId } = render(SingUp);
 
     const labelName = getByTestId("name-id");
     const labelEmail = getByTestId("email-id");
@@ -23,7 +23,7 @@ describe("Component SingUP", () => {
   });
 
   test("Input label", async() => {
-    const { getByTestId } = render(SingUP);
+    const { getByTestId } = render(SingUp);
 
     const labelName = getByTestId("name-id");
     const labelEmail = getByTestId("email-id");
