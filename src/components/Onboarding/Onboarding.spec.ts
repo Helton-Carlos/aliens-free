@@ -21,7 +21,7 @@ describe("Component Onboarding", () => {
     expect(title.textContent).toBe("Trade anytime anywhere 3");
   });
 
-  test.only("Onboarding Subtitle", async () => {
+  test("Onboarding Subtitle", async () => {
     const { getByTestId } = render(Onboarding);
 
     const subtitle = getByTestId("subtitle-id");

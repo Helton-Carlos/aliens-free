@@ -22,7 +22,7 @@ function checkForm() {
   setTimeout(() => {
     isLoading.value = false;
 
-    if ( name.value && email.value && password.value && passwordConfirm.value ) {
+    if (name.value && email.value && password.value && passwordConfirm.value) {
       api.get("/users").then((response) => {
         response.data;
       });
@@ -46,18 +46,20 @@ function checkForm() {
       <Input
         id="name"
         type="text"
-        label="name"
+        label="Name"
         placeholder="Type your name"
         v-model:modelValue="name"
         class="mb-4"
+        data-testid="name-id"
       />
       <Input
         id="email"
         type="email"
-        label="email"
+        label="E-mail"
         placeholder="Type your email"
         v-model:modelValue="email"
         class="mb-4"
+        data-testid="email-id"
       />
       <Input
         id="password"
@@ -66,6 +68,7 @@ function checkForm() {
         placeholder="Type your password"
         v-model:modelValue="password"
         class="mb-4"
+        data-testid="password-id"
       />
       <Input
         id="password-confirm"
@@ -73,10 +76,15 @@ function checkForm() {
         label="Confirm the password"
         placeholder="Confirm the password"
         v-model:modelValue="passwordConfirm"
-        class="mb-4"
+        data-testid="password-confirm-id"
       />
 
-      <Button title="To save" class="py-2 my-2 w-full" type="submit" />
+      <Button
+        title="To save"
+        class="py-2 my-2 w-full"
+        type="submit"
+        data-testid="btn-id"
+      />
     </form>
 
     <div class="vl-parent">

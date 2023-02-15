@@ -17,7 +17,7 @@ describe("Component SingIn", () => {
     expect(labelPassword.textContent).toBe("Password");
   });
 
-  test.only("Input label", async() => {
+  test("Input label", async() => {
     const { getByTestId } = render(SingIn);
 
     const labelEmail = getByTestId("email-id");
