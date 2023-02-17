@@ -25,7 +25,7 @@ getMoney();
 <template>
   <div class="bg-white w-full min-h-screen py-4">
     <div class="w-11/12 mx-auto">
-      <h3 class="text-lg font-semibold">🪙{{ route.meta.title }}</h3>
+      <h3 class="text-lg font-semibold" data-testid="title-id">🪙{{ route.meta.title }}</h3>
       <div class="md:flex md:gap-4">
         <Card
           v-for="(moeda, index) in money"
@@ -34,6 +34,7 @@ getMoney();
           :title="maskMoney(moeda.high)"
           :subtitle="`${moeda.code}/${moeda.codein}`"
           :arrow="true"
+          data-testid="card-id"
         />
       </div>
     </div>
