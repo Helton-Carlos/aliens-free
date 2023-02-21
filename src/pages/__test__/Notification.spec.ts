@@ -1,15 +1,15 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../Home.vue";
+import NotificationView from "../NotificationView.vue";
 
-describe("Page Home ", () => {
-  test("Render Home", () => {
+describe("Page NotificationView ", () => {
+  test("Render NotificationView", () => {
     const router = createRouter({
       history: createWebHistory(),
       routes: [
         {
-          path: "/",
-          component: Home,
+          path: "/notification",
+          component: NotificationView,
           meta: {
             navBar: true,
           },
@@ -17,7 +17,7 @@ describe("Page Home ", () => {
       ],
     });
 
-    const wrapper = render(Home, {
+    const wrapper = render(NotificationView, {
       global: {
         plugins: [router],
       },

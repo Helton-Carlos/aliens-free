@@ -1,23 +1,20 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../Home.vue";
+import Boarding from "../Boarding.vue";
 
-describe("Page Home ", () => {
-  test("Render Home", () => {
+describe("Page Boarding ", () => {
+  test("Render Boarding", () => {
     const router = createRouter({
       history: createWebHistory(),
       routes: [
         {
-          path: "/",
-          component: Home,
-          meta: {
-            navBar: true,
-          },
+          path: "/boarding",
+          component: Boarding,
         },
       ],
     });
 
-    const wrapper = render(Home, {
+    const wrapper = render(Boarding, {
       global: {
         plugins: [router],
       },
