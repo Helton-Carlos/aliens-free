@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRoute  } from "vue-router";
-import Table from "@/components/Table/Table.vue";
 import { ITable } from "@/types/utilities";
 import { ref } from "vue";
+import Table from "@/components/Table/Table.vue";
 
 const infoTable = ref<ITable[]>([
   { day: 2, historic: "pag-cred", money: "5.00", status: "exit" },
