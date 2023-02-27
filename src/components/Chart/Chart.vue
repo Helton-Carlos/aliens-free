@@ -7,7 +7,7 @@ const chartOptions = {
     width: 380,
     type: "polarArea",
   },
-  labels: ["Janeiro A", "Fevereiro B", "Março C", "Abril D", "Maio E", "Junho F"],
+  labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
   fill: {
     opacity: 1,
   },
