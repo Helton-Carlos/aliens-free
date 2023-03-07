@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { boarding } from './onBoarding';
+import boarding from './onBoarding';
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 import Button from "../Button/Button.vue";
 import Ellipse from '../Icon/Ellipse.vue';
 
-const board = boarding()
 const count = ref<number>(0)
 const router = useRouter()
 
@@ -20,10 +19,10 @@ function bntNext() {
 
 <template>
   <div class="text-center w-5/6">
-    <img :src="board[count].image" :alt="board[count].title" class="m-auto h-[55%] mt-4" />
-    <h3 class="text-white pt-4 font-medium animate__backInRight" data-testid="title-id">{{ board[count].title }}</h3>
+    <img :src="boarding[count].image" :alt="boarding[count].title" class="m-auto h-[55%] mt-4" />
+    <h3 class="text-white pt-4 font-medium animate__backInRight" data-testid="title-id">{{ boarding[count].title }}</h3>
     <p class="text-gray-medio pt-2 text-sm" data-testid="subtitle-id">
-      {{ board[count].subtitle }}
+      {{ boarding[count].subtitle }}
     </p>
 
     <div class="flex justify-center gap-2 py-2">
