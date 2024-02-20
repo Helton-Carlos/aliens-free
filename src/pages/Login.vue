@@ -36,15 +36,19 @@ function bntSignUp() {
 <template>
   <div>
     <div class="flex justify-between items-center my-2 ">
-      <Close @onClick="clickClose" class="p-5 lg:p-8" />
+      <Close 
+        @onClick="clickClose" 
+        class="p-4 lg:p-8" 
+      />
 
-      <div class="mt-4 justify-items-center">
+      <div class="mt-8 justify-items-center">
         <Button
           title="sign in"
           :color="btnColorIn"
           class="md:w-[250px]"
           @onClick="bntSignIn()"
         />
+        
         <Button
           title="sign up"
           :color="btnColorUp"
@@ -56,7 +60,7 @@ function bntSignUp() {
       </div>
     </div>
 
-    <div class="lg:w-2/4 lg:m-auto">
+    <div class="lg:w-2/4 lg:m-auto mx-2">
       <SingIn v-if="showSingIn" />
       <SingUp v-else />
     </div>

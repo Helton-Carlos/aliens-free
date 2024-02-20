@@ -1,40 +1,40 @@
 <script setup lang="ts">
 import Button from "@/components/Button/Button.vue";
 import { ITable } from "@/types/utilities";
-import * as pdfMake from 'pdfmake/build/pdfmake.js';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts.js';
+// import pdfMake from 'pdfmake/build/pdfmake';
+// import pdfFonts from 'pdfmake/build/vfs_fonts';;
 
-(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+// (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
 const table = defineProps<{ infoTable: ITable[] }>();
 
 function exportPdf() {
-  const info = table.infoTable;
+  //const info = table.infoTable;
 
-  var docDefinition = {
-    content: [
-      {
-        layout: "lightHorizontalLines", // optional
-        table: {
-          headerRows: 1,
-          widths: ["*", "auto", 100, "*"],
-          body: [
-            ["Day", "Historic", "Money", "Status"],
-            [
-              info.map((item) => item.day),
-              info.map((item) => item.historic),
-              info.map((item) => item.money),
-              info.map((item) => item.status),
-            ],
-            [{ text: "Extract", bold: true }, "-", "-", "200.00"],
-            //[{ text: "Bold value", bold: true }, "Val 2", "Val 3", "Val 4"],
-          ],
-        },
-      },
-    ],
-  };
+  // let docDefinition = {
+  //   content: [
+  //     {
+  //       layout: "lightHorizontalLines", // optional
+  //       table: {
+  //         headerRows: 1,
+  //         widths: ["*", "auto", 100, "*"],
+  //         body: [
+  //           ["Day", "Historic", "Money", "Status"],
+  //           [
+  //             info.map((item) => item.day),
+  //             info.map((item) => item.historic),
+  //             info.map((item) => item.money),
+  //             info.map((item) => item.status),
+  //           ],
+  //           [{ text: "Extract", bold: true }, "-", "-", "200.00"],
+  //           //[{ text: "Bold value", bold: true }, "Val 2", "Val 3", "Val 4"],
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // };
 
-  pdfMake.createPdf(docDefinition).download();
+  //pdfMake.createPdf(docDefinition).download();
 }
 </script>
 
@@ -96,6 +96,7 @@ function exportPdf() {
         </tbody>
       </table>
     </div>
+    
     <Button
       title="DownLoad"
       class="py-2 my-2 w-full"

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Button from "@/components/Button/Button.vue";
 import Input from "@/components/Input/Input.vue";
-import Loading from "vue-loading-overlay";
 import { useCookies } from "vue3-cookies";
 import { useRouter } from "vue-router";
 import { api } from "@/server/axios";
@@ -13,16 +12,8 @@ const { cookies } = useCookies();
 const email = ref<string>("");
 const password = ref<string>("");
 
-const isLoading = ref<boolean>(false);
-const widthLoading = ref<number>(50);
-const fullPage = ref<boolean>(true);
-
 function checkForm() {
-  isLoading.value = true;
-
   setTimeout(() => {
-    isLoading.value = false;
-
     if (email.value && password.value) {
       api.get("/users").then((response) => {
         const { id, user, email, token, money, image } =
@@ -49,10 +40,17 @@ function checkForm() {
 <template>
   <div>
     <div>
-      <img src="@/assets/ilustration-login.svg" alt="user-astronaut" class="mx-auto" />
+      <img 
+        src="@/assets/ilustration-login.svg" 
+        alt="user-astronaut" 
+        class="mx-auto" 
+      />
     </div>
 
-    <form class="mx-5 flex justify-center flex-col" @submit.prevent="checkForm">
+    <form 
+      class="mx-5 flex justify-center flex-col" 
+      @submit.prevent="checkForm"
+    >
       <Input
         id="email"
         type="email"
@@ -62,6 +60,7 @@ function checkForm() {
         class="mb-4"
         data-testid="email-id"
       />
+
       <Input
         id="password"
         type="password"
@@ -72,20 +71,12 @@ function checkForm() {
         data-testid="password-id"
       />
 
-      <Button title="Sign in" class="py-2 my-2 w-full" type="submit" data-testid="btn-id"  />
-    </form>
-
-    <div class="vl-parent">
-      <!-- https://github.com/ankurk91/vue-loading-overlay -->
-      <loading
-        v-model:active="isLoading"
-        color="#5ED5A8"
-        loader="spinner"
-        :width="widthLoading"
-        background-color="#000000"
-        :can-cancel="true"
-        :is-full-page="fullPage"
+      <Button 
+        title="Sign in" 
+        class="py-2 my-2 w-full" 
+        type="submit" 
+        data-testid="btn-id"  
       />
-    </div>
+    </form>
   </div>
 </template>

@@ -1,12 +1,18 @@
 <script setup lang="ts">
-defineProps<{ title: string, color?: string }>();
-defineEmits<{ (e:'onClick'): void }>();
+defineProps<{ 
+  title: string, 
+  color?: string 
+}>();
+
+defineEmits<{ 
+  (e:'onClick'): void 
+}>();
 </script>
 
 <template>
   <button
     data-testid="button"
-    class="px-7 py-1 rounded drop-shadow-md font-medium"
+    class="px-7 py-2 rounded drop-shadow-md font-medium my-2"
     :class="{
       'bg-green hover:bg-green-hover': color == null,
       'bg-dark text-white hover:text-gray': color === 'dark',

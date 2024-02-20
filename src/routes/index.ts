@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { ILogin } from "@/types/utilities";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,9 +21,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/Boarding.vue"),
   },
   {
-    path: "/sign",
-    name: "sign",
-    component: () => import("../pages/Sign.vue"),
+    path: "/login",
+    name: "login",
+    component: () => import("../pages/Login.vue"),
   },
   {
     path: "/notification",
@@ -102,35 +103,21 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  interface ILogin {
-    email: string;
-    id: number;
-    password: string;
-    token: string;
-    user: string;
-    age: string;
-    money: string;
-    image: string;
-  }
-
   if (
     (from && to.fullPath === "/cover") ||
     to.fullPath === "/boarding" ||
-    to.fullPath === "/sign"
+    to.fullPath === "/login"
   ) {
     next();
   } else {
     let local = localStorage.getItem("localStorage");
-    if (!local) {
-      next({ name: "cover" });
-    }
+
+    if (!local) return next({ name: "cover" });
+
     if (typeof local === "string") {
       let login: ILogin = JSON.parse(local);
-      if (!login) {
-        next({ name: "cover" });
-      } else {
-        next();
-      }
+
+      !login ? next({ name: "cover" }) : next();
     }
   }
 });

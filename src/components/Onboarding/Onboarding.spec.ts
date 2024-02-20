@@ -12,13 +12,13 @@ describe("Component Onboarding", () => {
     const { getByTestId } = render(Onboarding);
 
     const title = getByTestId("title-id");
-    expect(title.textContent).toBe("Trade anytime anywhere 1");
+    expect(title.textContent).toBe("Trade anytime anywhere");
 
     await fireEvent.click(getByTestId("btn-id"));
-    expect(title.textContent).toBe("Trade anytime anywhere 2");
+    expect(title.textContent).toBe("Secure Your Finances with Our Platform");
 
     await fireEvent.click(getByTestId("btn-id"));
-    expect(title.textContent).toBe("Trade anytime anywhere 3");
+    expect(title.textContent).toBe("Dive into the World of Investments");
   });
 
   test("Onboarding Subtitle", async () => {
@@ -26,17 +26,17 @@ describe("Component Onboarding", () => {
 
     const subtitle = getByTestId("subtitle-id");
     expect(subtitle.textContent).toBe(
-      "1-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+      "Our platform offers you the flexibility to manage your investments on the go, ensuring you never miss an opportunity."
     );
 
     await fireEvent.click(getByTestId("btn-id"));
     expect(subtitle.textContent).toBe(
-      "2-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+      "Rely on advanced security features to keep your funds protected and your peace of mind intact."
     );
 
     await fireEvent.click(getByTestId("btn-id"));
     expect(subtitle.textContent).toBe(
-      "3-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+      "A Beginner's Primer on Building Wealth through Smart Investing, advanced security."
     );
   });
 });

@@ -38,7 +38,7 @@ function onRouter(event: INav) {
   menuShow.value = !menuShow.value;
   if (event.name === "exit") {
     window.localStorage.removeItem("localStorage");
-    router.push({ name: "sign" });
+    router.push({ name: "login" });
   } else {
     router.push({ name: event.name });
   }

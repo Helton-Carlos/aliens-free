@@ -3,24 +3,17 @@ import { ref } from "vue";
 import { api } from "@/server/axios";
 import { useRouter } from "vue-router";
 import { INotification } from "@/types/utilities";
-import Loading from "vue-loading-overlay";
+
 import Card from "@/components/Card/Card.vue";
 
 const notes = ref<INotification[]>([]);
 
-const isLoading = ref<boolean>(false);
-const fullPage = ref<boolean>(true);
-const widthLoading = ref<number>(50);
-
 const router = useRouter();
 
 function init() {
-  isLoading.value = true;
-
   api.get("/notification").then((response) => {
     const { note } = response.data;
     notes.value = note;
-    isLoading.value = !isLoading.value;
   });
 }
 
@@ -44,14 +37,6 @@ init();
           :subtitle="note.context"
           :image="note.image"
           :arrow="true"
-        />
-        <loading
-          v-model:active="isLoading"
-          color="#5ED5A8"
-          loader="spinner"
-          :width="widthLoading"
-          background-color="#000000"
-          :is-full-page="fullPage"
         />
       </div>
     </div>

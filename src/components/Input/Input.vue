@@ -21,7 +21,7 @@ function updateInput(event: any) {
     <label
       v-if="label"
       :for="id"
-      class="block mb-1 capitalize text-sm font-medium text-gray-900 dark:text-white md:mb-4"
+      class="block mb-1 text-sm font-medium text-gray-900 dark:text-white md:mb-4"
     >
       {{ label }}
     </label>
@@ -31,7 +31,7 @@ function updateInput(event: any) {
       :id="id"
       :type="type"
       :value="modelValue"
-      class="block bg-dark w-full pl-5 py-2 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40"
+      class="block bg-dark w-full pl-5 py-3 text-sm text-white border border-gray-300 rounded-lg bg-gray-50 focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40"
       :placeholder="placeholder"
       @input="updateInput"
       required

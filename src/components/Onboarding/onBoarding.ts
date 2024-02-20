@@ -1,21 +1,25 @@
+import tema1 from '@/assets/Group01.svg';
+import tema2 from '@/assets/Group02.svg';
+import tema3 from '@/assets/Group03.svg';
+
 const boarding = [
   {
-    image: "src/assets/Group01.svg",
-    title: "Trade anytime anywhere 1",
+    image: tema1,
+    title: "Trade anytime anywhere",
     subtitle:
-      "1-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Our platform offers you the flexibility to manage your investments on the go, ensuring you never miss an opportunity.",
   },
   {
-    image: "src/assets/Group02.svg",
-    title: "Trade anytime anywhere 2",
+    image: tema2,
+    title: "Secure Your Finances with Our Platform",
     subtitle:
-      "2-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Rely on advanced security features to keep your funds protected and your peace of mind intact.",
   },
   {
-    image: "src/assets/Group03.svg",
-    title: "Trade anytime anywhere 3",
+    image: tema3,
+    title: "Dive into the World of Investments",
     subtitle:
-      "3-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "A Beginner's Primer on Building Wealth through Smart Investing, advanced security.",
   },
 ];
 

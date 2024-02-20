@@ -22,3 +22,14 @@ export interface ITable {
   money: string;
   status: string;
 }
+
+export interface ILogin {
+  email: string;
+  id: number;
+  password: string;
+  token: string;
+  user: string;
+  age: string;
+  money: string;
+  image: string;
+}

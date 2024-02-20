@@ -8,18 +8,18 @@ const router = useRouter()
 onMounted(()=> {
   setTimeout(()=>{
     router.push({ name: "boarding" })
-  }, 800)
+  }, 3000)
 })
 </script>
 
 <template>
   <div class="h-screen lg:items-center lg:flex lg:justify-center">
     <div class="m-4 pt-8 mt-10 lg:mt-4 md:pt-0">
-      <img src="@/assets/Jato.svg" alt="Jato" class="w-[320px] mx-auto" />
+      <img src="@/assets/Jato.svg" alt="Jato" class="w-[270px] mx-auto md:w-[320px]" />
     </div>
     
-    <div class="mx-4 lg:w-[450px]">
-      <h1 class="w-[145px] text-white text-3xl border-b-4 border-green">
+    <div class="mx-4 text-center lg:w-[450px]">
+      <h1 class="w-[145px] mx-auto text-white text-3xl border-b-4 border-green">
         Aliens Free
       </h1>
 
@@ -28,8 +28,7 @@ onMounted(()=> {
       </h2>
 
       <p class="text-gray pt-2 text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Connect to the world's largest cryptocurrency exchange.
       </p>
 
       <div class="mt-4 flex justify-center">
