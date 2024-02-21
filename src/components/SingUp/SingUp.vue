@@ -33,7 +33,9 @@ function checkForm() {
 
 <template>
   <div>
-    <h2 class="text-white p-2 text-lg font-bold">Sign up</h2>
+    <h2 class="text-white p-2 text-lg font-bold">
+      Sign up
+    </h2>
 
     <form 
       class="mx-5 flex justify-center flex-col" 
@@ -43,7 +45,7 @@ function checkForm() {
         id="name"
         type="text"
         label="Name"
-        placeholder="Type your name"
+        placeholder="John Doe"
         v-model:modelValue="name"
         class="mb-4"
         data-testid="name-id"
@@ -53,7 +55,7 @@ function checkForm() {
         id="email"
         type="email"
         label="E-mail"
-        placeholder="Type your email"
+        placeholder="johndoe@gmail.com"
         v-model:modelValue="email"
         class="mb-4"
         data-testid="email-id"
@@ -63,7 +65,7 @@ function checkForm() {
         id="password"
         type="password"
         label="Password"
-        placeholder="Type your password"
+        placeholder="Your password"
         v-model:modelValue="password"
         class="mb-4"
         data-testid="password-id"

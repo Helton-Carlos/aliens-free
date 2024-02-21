@@ -4,6 +4,11 @@ defineEmits<{ (e:'onClick'): void }>();
 
 <template>
   <div>
-    <img src="@/assets/Close.svg" class="hover:cursor-pointer" alt="close" @click="$emit('onClick')">
+    <img 
+      src="@/assets/Close.svg" 
+      alt="close"
+      class="hover:cursor-pointer"  
+      @click="$emit('onClick')"
+    >
   </div>
 </template>

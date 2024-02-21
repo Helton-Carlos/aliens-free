@@ -11,7 +11,7 @@ describe("Page Bitcon ", () => {
           path: "/bitcon",
           component: Bitcon,
           meta: {
-            navBar: true,
+            NavBar: true,
             title: "Bitcon",
           },
         },
@@ -35,7 +35,7 @@ describe("Page Bitcon ", () => {
           path: "/bitcon",
           component: Bitcon,
           meta: {
-            navBar: true,
+            NavBar: true,
             title: "Bitcon",
           },
         },

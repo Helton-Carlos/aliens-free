@@ -8,7 +8,7 @@ const route = useRoute();
 <template>
 <div>
   <div 
-    v-if="route.meta.navBar"
+    v-if="route.meta.NavBar"
     class="w-11/12 mx-auto py-7" 
   >
     <Nav />

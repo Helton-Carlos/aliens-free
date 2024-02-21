@@ -1,98 +1,98 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { ILogin } from "@/types/utilities";
+import { IUserInfo } from "@/types/utilities";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
-    component: () => import("../pages/Home.vue"),
+    component: () => import("../pages/Home/Home.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
     },
   },
   {
     path: "/cover",
     name: "cover",
-    component: () => import("../pages/Cover.vue"),
+    component: () => import("../pages/Cover/Cover.vue"),
   },
   {
     path: "/boarding",
     name: "boarding",
-    component: () => import("../pages/Boarding.vue"),
+    component: () => import("../pages/Boarding/Boarding.vue"),
   },
   {
     path: "/login",
     name: "login",
-    component: () => import("../pages/Login.vue"),
+    component: () => import("../pages/Login/Login.vue"),
   },
   {
     path: "/notification",
     name: "notificationView",
-    component: () => import("../pages/NotificationView.vue"),
+    component: () => import("../pages/Notification/NotificationView.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
     },
   },
   {
     path: "/notification/:id",
     name: "notification",
     props: true,
-    component: () => import("../pages/Notification.vue"),
+    component: () => import("../pages/Notification/Notification.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
     },
   },
   {
     path: "/bitcon",
     name: "bitcon",
-    component: () => import("../pages/navBar/Bitcon.vue"),
+    component: () => import("../pages/NavBar/Bitcon.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
       title: "Bitcon"
     },
   },
   {
     path: "/chart",
     name: "chart",
-    component: () => import("../pages/navBar/Chart.vue"),
+    component: () => import("../pages/NavBar/Chart.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
       title: "Chart-Month"
     },
   },
   {
     path: "/extract",
     name: "extract",
-    component: () => import("../pages/navBar/Extract.vue"),
+    component: () => import("../pages/NavBar/Extract.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
       title: "Extract"
     },
   },
   {
     path: "/investiment",
     name: "investiment",
-    component: () => import("../pages/navBar/Investiment.vue"),
+    component: () => import("../pages/NavBar/Investiment.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
       title: "Investiment"
     },
   },
   {
     path: "/user",
     name: "user",
-    component: () => import("../pages/navBar/User.vue"),
+    component: () => import("../pages/NavBar/User.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
       title: "User"
     },
   },
   {
     path: "/service",
     name: "service",
-    component: () => import("../pages/Service.vue"),
+    component: () => import("../pages/Service/Service.vue"),
     meta: {
-      navBar: true,
+      NavBar: true,
     },
   },
 ];
@@ -115,7 +115,7 @@ router.beforeEach((to, from, next) => {
     if (!local) return next({ name: "cover" });
 
     if (typeof local === "string") {
-      let login: ILogin = JSON.parse(local);
+      let login: IUserInfo = JSON.parse(local);
 
       !login ? next({ name: "cover" }) : next();
     }

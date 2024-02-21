@@ -43,14 +43,14 @@ function bntSignUp() {
 
       <div class="mt-8 justify-items-center">
         <Button
-          title="sign in"
+          title="Sign in"
           :color="btnColorIn"
           class="md:w-[250px]"
           @onClick="bntSignIn()"
         />
         
         <Button
-          title="sign up"
+          title="Sign up"
           :color="btnColorUp"
           class="md:w-[250px]"
           @onClick="bntSignUp()"

@@ -32,8 +32,5 @@ getNotification();
         />
       </div>
     </div>
-    <div class="vl-parent">
-     
-    </div>
   </div>
 </template>

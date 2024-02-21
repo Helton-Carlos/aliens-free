@@ -59,16 +59,23 @@ const menuNav = ref<INav[]>([
     <div class="flex justify-between">
       <div class="flex items-center">
         <img
-          class="h-10 w-10 rounded-full cursor-pointer"
           :src="image"
           alt="user"
+          class="h-10 w-10 rounded-full cursor-pointer"
           @click="onIndex()"
         />
+        
         <div class="text-green ">
-          <p class="font-medium px-2" v-if="!inputShow">
+          <p 
+            v-if="!inputShow"
+            class="font-medium px-2" 
+          >
             User: {{ user }}
           </p>
-          <p class="font-medium px-2 flex" v-if="!inputShow">
+          <p 
+            v-if="!inputShow" 
+            class="font-medium px-2 flex"
+          >
             Money: <div class="pl-1" id="value">{{ money }}</div> 
           </p>
         </div>
@@ -91,6 +98,7 @@ const menuNav = ref<INav[]>([
           class="cursor-pointer pr-2"
           @click="onSearch"
         />
+
         <img
           v-if="!inputShow"
           src="@/assets/icon/Menu.svg"
@@ -98,6 +106,7 @@ const menuNav = ref<INav[]>([
           class="cursor-pointer px-2"
           @click="onMenu"
         />
+
         <img
           v-if="!inputShow"
           src="@/assets/icon/Notificacao.svg"
@@ -118,8 +127,16 @@ const menuNav = ref<INav[]>([
         :key="Index"
         @click="onRouter(Nav)"
       >
-        <img :src="Nav.image" :alt="Nav.name" class="w-[20px] md:h-[20px]" />
-        <p class="text-gray capitalize hover:text-green">{{ Nav.name }}</p>
+        <img 
+          :src="Nav.image" 
+          :alt="Nav.name" 
+          class="w-[20px] md:h-[20px]" 
+        />
+
+        <p class="text-gray capitalize hover:text-green">
+          {{ Nav.name }}
+        </p>
+
         <hr class="text-gray-light" />
       </div>
     </div>

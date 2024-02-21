@@ -1,20 +1,23 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Boarding from "../Boarding.vue";
+import NotificationView from "./NotificationView.vue";
 
-describe("Page Boarding ", () => {
-  test("Render Boarding", () => {
+describe("Page NotificationView ", () => {
+  test("Render NotificationView", () => {
     const router = createRouter({
       history: createWebHistory(),
       routes: [
         {
-          path: "/boarding",
-          component: Boarding,
+          path: "/notification",
+          component: NotificationView,
+          meta: {
+            NavBar: true,
+          },
         },
       ],
     });
 
-    const wrapper = render(Boarding, {
+    const wrapper = render(NotificationView, {
       global: {
         plugins: [router],
       },

@@ -1,3 +1,15 @@
+export interface IUserInfo {
+  email?: string;
+  id?: number;
+  password?: string;
+  token?: string;
+  age?: string;
+  user: string;
+  money: string;
+  profession: string;
+  image: string;
+}
+
 export interface INotification {
   title: string;
   context: string;
@@ -21,15 +33,4 @@ export interface ITable {
   historic: string;
   money: string;
   status: string;
-}
-
-export interface ILogin {
-  email: string;
-  id: number;
-  password: string;
-  token: string;
-  user: string;
-  age: string;
-  money: string;
-  image: string;
 }

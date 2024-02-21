@@ -28,7 +28,10 @@ init();
   <div class="bg-gray-light w-full min-h-screen py-4">
     <div class="w-11/12 mx-auto">
       <div>
-        <h3 class="text-lg font-semibold">Notification</h3>
+        <h3 class="text-lg font-semibold">
+          Notification
+        </h3>
+        
         <Card
           v-for="(note, index) in notes"
           :key="index"

@@ -43,7 +43,7 @@ function checkForm() {
       <img 
         src="@/assets/ilustration-login.svg" 
         alt="user-astronaut" 
-        class="mx-auto" 
+        class="mx-auto my-4" 
       />
     </div>
 
@@ -55,7 +55,7 @@ function checkForm() {
         id="email"
         type="email"
         label="E-mail"
-        placeholder="Enter your email"
+        placeholder="johndoe@gmail.com"
         v-model:modelValue="email"
         class="mb-4"
         data-testid="email-id"
@@ -65,7 +65,7 @@ function checkForm() {
         id="password"
         type="password"
         label="Password"
-        placeholder="Enter your password"
+        placeholder="Your password"
         v-model:modelValue="password"
         class="mb-4"
         data-testid="password-id"

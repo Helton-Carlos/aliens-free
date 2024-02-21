@@ -1,20 +1,23 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Cover from "../Cover.vue";
+import Home from "./Home.vue";
 
-describe("Page Cover ", () => {
-  test("Render Cover", () => {
+describe("Page Home ", () => {
+  test("Render Home", () => {
     const router = createRouter({
       history: createWebHistory(),
       routes: [
         {
-          path: "/Cover",
-          component: Cover
+          path: "/",
+          component: Home,
+          meta: {
+            NavBar: true,
+          },
         },
       ],
     });
 
-    const wrapper = render(Cover, {
+    const wrapper = render(Home, {
       global: {
         plugins: [router],
       },

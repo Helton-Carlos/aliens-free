@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
+import { IUserInfo } from "@/types/utilities";
 
 interface State {
-  users: UserInfo | null;
+  users: IUserInfo | null;
 }
 
 export const useUserStore = defineStore("user", {
@@ -18,9 +19,3 @@ export const useUserStore = defineStore("user", {
   },
 });
 
-interface UserInfo {
-  user: string;
-  money: string;
-  profession: string;
-  image: string;
-}
