@@ -1,6 +1,5 @@
 <script setup lang="ts">
 defineProps<{ 
-  title: string, 
   color?: string 
 }>();
 
@@ -20,6 +19,6 @@ defineEmits<{
     }"
     @click="$emit('onClick')"
   >
-    {{ title }}
+    <slot />
   </button>
 </template>

@@ -23,8 +23,13 @@ const useUser = useUserStore();
           useUser.users?.profession
         }}</span>
         <div class="flex m-2 space-x-3">
-          <Button title="Change" class="py-2 my-2 w-full" />
-          <Button title="To edit" class="py-2 my-2 w-full" />
+          <Button class="py-2 my-2 w-full">
+            Change
+          </Button>
+          
+          <Button class="py-2 my-2 w-full">
+            To edit
+          </Button>
         </div>
       </div>
     </div>

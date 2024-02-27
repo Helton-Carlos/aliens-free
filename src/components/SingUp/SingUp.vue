@@ -82,11 +82,12 @@ function checkForm() {
       />
 
       <Button
-        title="Confirm"
         class="py-2 my-2 w-full" 
         type="submit"
         data-testid="btn-id"
-      />
+      >
+       Confirm
+      </Button>
     </form>
   </div>
 </template>

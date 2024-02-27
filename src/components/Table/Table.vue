@@ -98,9 +98,10 @@ function exportPdf() {
     </div>
     
     <Button
-      title="DownLoad"
       class="py-2 my-2 w-full"
       @click.prevent="exportPdf()"
-    />
+    >
+      DownLoad
+    </Button>
   </div>
 </template>

@@ -46,11 +46,11 @@ function bntNext() {
     </div>
 
     <Button 
-      title="Next" 
       class="m-2" 
       @onClick='bntNext()' 
       data-testid="btn-id" 
-    />
-
+    >
+      Next
+    </Button>
   </div>
 </template>

@@ -72,11 +72,12 @@ function checkForm() {
       />
 
       <Button 
-        title="Sign in" 
         class="py-2 my-2 w-full" 
         type="submit" 
         data-testid="btn-id"  
-      />
+      >
+        Sign in
+      </Button>
     </form>
   </div>
 </template>
