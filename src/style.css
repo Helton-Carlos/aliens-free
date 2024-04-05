@@ -13,3 +13,8 @@ body {
 p {
   padding: 0;
 }
+
+.input-standard {
+  @apply block bg-dark w-full pl-5 py-3 text-sm text-white border-2 border-gray rounded-lg 
+    focus:border-green focus:ring-green focus:outline-none focus:ring focus:ring-opacity-40;
+}

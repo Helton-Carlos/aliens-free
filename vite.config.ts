@@ -4,6 +4,9 @@ import VueTypeImports from 'vite-plugin-vue-type-imports'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  server: {
+    port: 4000
+  },
   plugins: [
     vue(),
     VueTypeImports(),

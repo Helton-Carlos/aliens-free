@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import CardUser from '@/components/Card/CardUser.vue';
 import { useRoute  } from "vue-router";
+
 const route = useRoute ();
 </script>
 

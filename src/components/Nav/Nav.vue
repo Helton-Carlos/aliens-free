@@ -3,21 +3,38 @@ import { ref, computed } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
 import { useUserStore } from "@/store/index";
+import { userLocalStorageStore } from "@/store/user";
 import Input from "@/components/Input/Input.vue";
 
 const search = ref<string>("");
 const router = useRouter();
 
 const useUser = useUserStore();
-const image = computed(() => useUser.users?.image);
-const user = computed(() => useUser.users?.user );
-const money = computed(() => useUser.users?.money );
+const { 
+  removeUserStorage, 
+  getUserStorage 
+} = userLocalStorageStore();
+
+const { name } = getUserStorage();
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
 
+const menuNav = ref<INav[]>([
+  { image: "./src/assets/nav/Bitcon.svg", name: "bitcon" },
+  { image: "./src/assets/nav/Chart.svg", name: "chart" },
+  { image: "./src/assets/nav/Extrato.svg", name: "extract" },
+  { image: "./src/assets/nav/Investiment.svg", name: "investiment" },
+  { image: "./src/assets/nav/User.svg", name: "user" },
+  { image: "./src/assets/nav/Exit.svg", name: "exit" },
+]);
+
+const image = computed(() => useUser.users?.image);
+const money = computed(() => useUser.users?.money );
+
 function onNotification() {
   menuShow.value = false;
+
   router.push({ name: 'notificationView'});
 }
 
@@ -36,22 +53,15 @@ function onIndex() {
 
 function onRouter(event: INav) {
   menuShow.value = !menuShow.value;
+  
   if (event.name === "exit") {
-    window.localStorage.removeItem("localStorage");
+    removeUserStorage();
+
     router.push({ name: "login" });
   } else {
     router.push({ name: event.name });
   }
 }
-
-const menuNav = ref<INav[]>([
-  { image: "./src/assets/nav/Bitcon.svg", name: "bitcon" },
-  { image: "./src/assets/nav/Chart.svg", name: "chart" },
-  { image: "./src/assets/nav/Extrato.svg", name: "extract" },
-  { image: "./src/assets/nav/Investiment.svg", name: "investiment" },
-  { image: "./src/assets/nav/User.svg", name: "user" },
-  { image: "./src/assets/nav/Exit.svg", name: "exit" },
-]);
 </script>
 
 <template>
@@ -70,7 +80,7 @@ const menuNav = ref<INav[]>([
             v-if="!inputShow"
             class="font-medium px-2" 
           >
-            User: {{ user }}
+            User: {{ name }}
           </p>
           <p 
             v-if="!inputShow" 

@@ -110,7 +110,7 @@ router.beforeEach((to, from, next) => {
   ) {
     next();
   } else {
-    let local = localStorage.getItem("localStorage");
+    let local = localStorage.getItem("user");
 
     if (!local) return next({ name: "cover" });
 

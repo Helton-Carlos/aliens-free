@@ -5,27 +5,21 @@ export function makeServer({ environment = "development" } = {}) {
     environment,
 
     models: {
-      user: Model,
+      users: Model,
     },
 
     routes() {
       this.namespace = "api";
 
-      this.get("/users", () => ({
-        client: [
-          {
-            id: 0,
-            email: "teste@gmail.com",
-            password: "teste@gmail.com",
-            token: "sdfdfd784ewe2fdc20150dsa23vcasvbe",
-            user: "José Brito",
-            age: "29/08/1977",
-            money: "200.00",
-            image:
-              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          },
-        ],
-      }));
+      this.post("/users", (schema, request) => {
+        let attrs = JSON.parse(request.requestBody);
+
+        return schema.users.create(attrs)
+      });
+
+      this.get("/users", schema => {
+        return schema.users.all();
+      });
 
       this.get("/money", () => ({
         moedas: [
