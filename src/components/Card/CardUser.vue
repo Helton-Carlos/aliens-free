@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import Button from "@/components/Button/Button.vue";
-import { useUserStore } from "@/store/index";
+import { userLocalStorageStore } from "@/store/user";
 
-const useUser = useUserStore();
+const { 
+  userStatus
+} = userLocalStorageStore();
+
+const { 
+  name, profession, image 
+} = userStatus();
 </script>
 
 <template>
@@ -13,15 +19,18 @@ const useUser = useUserStore();
       <div class="flex flex-col items-center mt-4">
         <img
           class="w-24 h-24 mb-3 rounded-full shadow-lg"
-          :src="useUser.users?.image"
-          :alt="useUser.users?.user"
+          :src="image"
+          :alt="name"
         />
+
         <h5 class="text-xl font-medium text-blue">
-          {{ useUser.users?.user }}
+          {{ name }}
         </h5>
-        <span class="text-sm text-green-500">{{
-          useUser.users?.profession
-        }}</span>
+
+        <span class="text-sm text-green-500">
+          {{ profession }}
+        </span>
+
         <div class="flex m-2 space-x-3">
           <Button class="py-2 my-2 w-full">
             Change

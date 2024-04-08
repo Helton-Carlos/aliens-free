@@ -1,21 +1,19 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { INav } from "./INav";
 import { useRouter } from "vue-router";
-import { useUserStore } from "@/store/index";
 import { userLocalStorageStore } from "@/store/user";
 import Input from "@/components/Input/Input.vue";
 
 const search = ref<string>("");
 const router = useRouter();
 
-const useUser = useUserStore();
 const { 
-  removeUserStorage, 
-  getUserStorage 
+  userStatus, 
+  removeUserStorage
 } = userLocalStorageStore();
 
-const { name } = getUserStorage();
+const { name, money, image } = userStatus();
 
 const inputShow = ref<boolean>(false);
 const menuShow = ref<boolean>(false);
@@ -28,9 +26,6 @@ const menuNav = ref<INav[]>([
   { image: "./src/assets/nav/User.svg", name: "user" },
   { image: "./src/assets/nav/Exit.svg", name: "exit" },
 ]);
-
-const image = computed(() => useUser.users?.image);
-const money = computed(() => useUser.users?.money );
 
 function onNotification() {
   menuShow.value = false;
