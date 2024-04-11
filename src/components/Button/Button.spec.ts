@@ -2,20 +2,19 @@ import { render } from "@testing-library/vue";
 import Button from "./Button.vue";
 
 describe("Button component", () => {
-  test("Render Button", async () => {
+  test("Render Button", () => {
 		const component = render(Button)
 		
     expect(component).toBeDefined()
   });
 
-  test("Props Button", async () => {
+  test("Props Button", () => {
 		const component = render(Button, {
-      props: {
-        title: "title",
-        color: "dark"
-      },
+      slots: {
+        default: 'Name Button'
+      }
     })
-
-    expect(component.getByText('title')).toBeDefined();
+  
+    expect(component.html()).toBe('<button data-testid="button" class="px-7 py-2 rounded drop-shadow-md font-medium my-2 bg-green hover:bg-green-hover">Name Button</button>')
   });
 });

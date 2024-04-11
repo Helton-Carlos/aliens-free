@@ -1,23 +1,31 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model } from 'miragejs';
+import { IUserInfo } from "@/types/utilities";
 
 export function makeServer({ environment = "development" } = {}) {
   let server = createServer({
     environment,
 
     models: {
-      users: Model,
+      users: Model.extend<IUserInfo>({
+        name: '',
+        email: '',
+        user: '',
+        money: '',
+        profession: '',
+        image: ''
+      }),
     },
 
     routes() {
       this.namespace = "api";
 
-      this.post("/users", (schema, request) => {
+      this.post("/users", (schema: any, request) => {
         let attrs = JSON.parse(request.requestBody);
 
         return schema.users.create(attrs)
       });
 
-      this.get("/users", schema => {
+      this.get("/users", (schema: any) => {
         return schema.users.all();
       });
 
