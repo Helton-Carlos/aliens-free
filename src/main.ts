@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { globalCookiesConfig } from "vue3-cookies";
 import { makeServer } from "@/server/index";
 import { createPinia } from 'pinia';
+
 import Router from './routes/index';
 import VueApexCharts from "vue3-apexcharts";
 import './style.css';
@@ -12,7 +13,7 @@ if (process.env.NODE_ENV === "development") {
   makeServer();
 }
 
-const Pinia = createPinia();
+const pinia = createPinia();
 const app = createApp(App);
 
 globalCookiesConfig({
@@ -25,5 +26,5 @@ globalCookiesConfig({
 
 app.use(Router);
 app.use(VueApexCharts);
-app.use(Pinia);
+app.use(pinia);
 app.mount('#app');

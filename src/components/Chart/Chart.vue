@@ -2,6 +2,7 @@
 import { ref } from "vue";
 
 const series = ref<number[]>([42, 47, 52, 58, 65, 72]);
+
 const chartOptions = {
   chart: {
     width: 380,
@@ -47,6 +48,7 @@ const chartOptions = {
       type="polarArea"
       :options="chartOptions"
       :series="series"
+      data-testid="chart"
     ></apexchart>
   </div>
 </template>
