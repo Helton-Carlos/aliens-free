@@ -35,3 +35,18 @@ export interface ITable {
   money: string;
   status: string;
 }
+
+export interface IInput {
+  label?: string;
+  id: string;
+  placeholder: string;
+  type: string;
+  modelValue: string | number;
+}
+
+export interface ICard {
+  title: string;
+  subtitle: string;
+  image: string;
+  arrow: boolean;
+}
