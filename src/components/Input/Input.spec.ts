@@ -1,32 +1,38 @@
 import { render } from "@testing-library/vue";
 import Input from "./Input.vue";
 
+const value = {
+  label: "Digite seu E-mail",
+  id: "e-mail",
+  placeholder: "Your e-mail",
+  type: "e-mail",
+  modelValue: "jonh@gmail.com"
+}
+
 describe("Input component", () => {
   test("Render Input", () => {
-    const component = render(Input);
+    const component = render(Input, {
+      props: value
+    });
 
     expect(component).toBeDefined();
   });
 
   test("Props Label", () => {
-    const label = render(Input, {
-      props: {
-        label: "Your e-mail",
-      },
+    const { getByText } = render(Input, {
+      props: value,
     });
 
-    expect(label.getByText("Your e-mail")).toBeDefined();
+    const input = getByText("Digite seu E-mail")
+
+    expect(input.textContent).toBe("Digite seu E-mail");
   });
 
   test("Props Input", () => {
-    const inputs = render(Input, {
-      props: {
-        id: "e-mail",
-        placeholder: "Your e-mail",
-        type: "e-mail",
-      },
+    const input = render(Input, {
+      props: value
     });
 
-    expect(inputs.getByTestId('add-word-input')).toBeDefined();
+    expect(input.getByTestId('add-word-input')).toBeDefined();
   });
 });

@@ -27,14 +27,14 @@ function updateInput(event: any) {
     </label>
 
     <input
-      data-testid="add-word-input"
+      class="input-standard"
       :id="id"
       :type="type"
       :value="modelValue"
-      class="input-standard"
       :placeholder="placeholder"
       @input="updateInput"
       required
+      data-testid="add-word-input"
     />
   </div>
 </template>

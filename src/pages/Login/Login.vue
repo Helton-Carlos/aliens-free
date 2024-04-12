@@ -54,6 +54,7 @@ async function singIn() {
         }
 
         localStorage.setItem('user', JSON.stringify(userStorage));
+
         router.push({ name: 'home'})
       } else {
         return alert("Dados incorreta");
@@ -102,6 +103,7 @@ function cleanInput() {
           :color="btnColorIn"
           class="md:w-[250px]"
           @onClick="bntSignIn()"
+          data-testid="button-sing-in"
         >
           Sign in
         </Button>
@@ -110,6 +112,7 @@ function cleanInput() {
           :color="btnColorUp"
           class="md:w-[250px]"
           @onClick="bntSignUp()"
+          data-testid="button-sing-up"
         >
           Sign up
         </Button>
