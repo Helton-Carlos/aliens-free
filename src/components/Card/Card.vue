@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="p-4 mb-4 bg-white rounded-lg shadow-md md:w-full cursor-pointer">
+  <div class="w-full p-4 mb-4 bg-white rounded-lg shadow-md cursor-pointer">
     <div class="flex items-center space-x-4">
       <div class="flex-shrink-0">
         <img class="w-12 h-12" :src="image" :alt="title" />
