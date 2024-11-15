@@ -14,7 +14,7 @@ describe("Button component", () => {
         default: 'Name Button'
       }
     })
-  
-    expect(component.html()).toBe('<button data-testid="button" class="px-7 py-2 rounded drop-shadow-md font-medium my-2 bg-green hover:bg-green-hover">Name Button</button>')
+    
+    expect(component.html()).toBe('<button data-testid="button" class="px-5 py-2 rounded drop-shadow-md font-normal my-2 bg-green hover:bg-green-hover">Name Button</button>')
   });
 });

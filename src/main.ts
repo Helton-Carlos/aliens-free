@@ -24,7 +24,4 @@ globalCookiesConfig({
   sameSite: "None",
 });
 
-app.use(Router);
-app.use(VueApexCharts);
-app.use(pinia);
-app.mount('#app');
+app.use(Router).use(VueApexCharts).use(pinia).mount('#app');
