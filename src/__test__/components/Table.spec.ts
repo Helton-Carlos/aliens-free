@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Table from "./Table.vue";
+import Table from "@/components/Table/Table.vue";
 
 describe("Table component", () => { 
   test("Render Table", () => {
