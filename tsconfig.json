@@ -32,8 +32,15 @@
       "@/store/*": ["*", "src/store/*"],
       "@/types/*": ["*", "src/types/*"],
       "@/component/*": ["*", "src/components/*"],
+      "@/pages/*": ["*", "src/pages/*"],
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./jest-setup.ts"],
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue", 
+    "./jest-setup.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

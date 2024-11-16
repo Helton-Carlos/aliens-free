@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Chart from "./Chart.vue";
+import Chart from "@/components/Chart/Chart.vue";
 
 describe("Chart component", () => {
   test("Render Chart", () => {

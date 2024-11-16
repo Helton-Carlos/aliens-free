@@ -1,6 +1,6 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "./Home.vue";
+import Home from "@/pages/Home/Home.vue";
 
 describe("Page Home ", () => {
   test("Render Home", () => {

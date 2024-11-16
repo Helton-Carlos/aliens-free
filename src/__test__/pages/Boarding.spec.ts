@@ -1,6 +1,6 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Boarding from "./Boarding.vue";
+import Boarding from "@/pages/Boarding/Boarding.vue";
 
 describe("Page Boarding ", () => {
   test("Render Boarding", () => {

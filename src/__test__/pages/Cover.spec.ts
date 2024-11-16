@@ -1,6 +1,6 @@
 import { render } from "@testing-library/vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Cover from "./Cover.vue";
+import Cover from "@/pages/Cover/Cover.vue";
 
 describe("Page Cover ", () => {
   test("Render Cover", () => {

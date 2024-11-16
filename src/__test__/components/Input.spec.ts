@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Input from "./Input.vue";
+import Input from "@/components/Input/Input.vue";
 
 const value = {
   label: "Digite seu E-mail",

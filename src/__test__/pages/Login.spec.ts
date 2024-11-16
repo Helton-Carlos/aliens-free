@@ -1,5 +1,5 @@
 import { render, fireEvent } from "@testing-library/vue";
-import Login from "./Login.vue";
+import Login from "@/pages/Login/Login.vue";
 
 describe("Page Login ", () => {
   test("Render Login", () => {

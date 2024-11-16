@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Bitcon from "../Bitcon.vue";
+import Bitcon from "@/pages/NavBar/Bitcon.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 describe("Page Bitcon ", () => {
